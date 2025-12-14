@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="grid items-center md:grid-cols-2 relative z-10">
         <div className="lg:mx-auto flex flex-col justify-center">
           <h1 className="text-shadow-md text-3xl lg:text-4xl font-bold text-primary tracking-wide mb-3">
-            Frontend Engineer
+            Web Developer
           </h1>
           <ul className="mb-5 text-sm font-semibold text-[#474747] space-y-1 list-disc pl-5">
             <li>Web application optimization and scalability</li>

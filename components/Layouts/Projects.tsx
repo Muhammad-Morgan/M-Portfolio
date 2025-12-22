@@ -43,9 +43,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <article
-      className={`border-primary border rounded-lg hover-style w-full max-w-sm mx-auto  ${
-        id === 5 ? "xl:col-span-3 lg:mx-auto mt-4" : ""
-      }`}
+      className={`border-primary border rounded-lg hover-style w-full max-w-sm mx-auto`}
     >
       <div className="mx-auto w-100 h-50 rounded-t-lg p-4 flex items-center bg-black/5">
         <span className="border-3 p-4 border-primary bg-primary rounded-lg mx-auto">

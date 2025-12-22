@@ -11,6 +11,7 @@ import {
   SearchIcon,
   StoreIcon,
   User,
+  CreditCard
 } from "lucide-react";
 export const links = [
   {
@@ -70,6 +71,14 @@ export const skills = [
 export const projects = [
   {
     id: 1,
+    url: "https://personal-finance-dashboard-nine-rho.vercel.app/",
+    icon: <CreditCard className="size-18 animate-pulse text-white/90" />,
+    github: "https://github.com/Muhammad-Morgan/Personal-Finance-Dashboard",
+    text: "Finance dashboard that allows to create and keep track on you spent and filter them based on dates",
+    title: "Personal Finance Dashboard",
+  },
+  {
+    id: 2,
     url: "https://next-store-roan-kappa.vercel.app/",
     icon: <StoreIcon className="size-18 animate-pulse text-white/90" />,
     github: "https://github.com/Muhammad-Morgan/Next-Store",
@@ -77,7 +86,7 @@ export const projects = [
     title: "Next Store",
   },
   {
-    id: 2,
+    id: 3,
     url: "https://jobify-tracker-brown.vercel.app/",
     icon: <BriefcaseBusiness className="size-18 animate-pulse text-white/90" />,
     github: "https://github.com/Muhammad-Morgan/Jobify",
@@ -85,7 +94,7 @@ export const projects = [
     title: "Jobify",
   },
   {
-    id: 3,
+    id: 4,
     url: "https://github-users-eomn.vercel.app/",
     icon: <SearchIcon className="size-18 animate-pulse text-white/90" />,
     github: "https://github.com/Muhammad-Morgan/Github-Users",
@@ -93,7 +102,7 @@ export const projects = [
     title: "Github User Search",
   },
   {
-    id: 4,
+    id: 5,
     url: "https://comply-task.vercel.app/",
     icon: <FormInputIcon className="size-18 animate-pulse text-white/90" />,
     text: "Form application with multiple stages that could be used for collecting different types of inputs from users, enhanced with fetching from api endpoints",

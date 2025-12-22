@@ -44,7 +44,7 @@ const ProjectCard = ({
   return (
     <article
       className={`border-primary border rounded-lg hover-style w-full max-w-sm mx-auto  ${
-        id === 4 ? "xl:col-span-3 lg:mx-auto mt-4" : ""
+        id === 5 ? "xl:col-span-3 lg:mx-auto mt-4" : ""
       }`}
     >
       <div className="mx-auto w-100 h-50 rounded-t-lg p-4 flex items-center bg-black/5">

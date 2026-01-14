@@ -4,11 +4,14 @@ import {
   BriefcaseBusiness,
   Code2,
   FormInputIcon,
+  Goal,
   Home,
   Laptop,
   Layers,
   Paintbrush,
+  Route,
   SearchIcon,
+  Server,
   StoreIcon,
   User,
 } from "lucide-react";
@@ -66,6 +69,18 @@ export const skills = [
       <Paintbrush className="size-13 md:size-15 hover-style animate-pulse" />
     ),
   },
+  {
+    id: 5,
+    title: "Node.js",
+    text: "Event-driven runtime for building fast, scalable server-side apps.",
+    icon: <Server className="size-13 md:size-15 hover-style animate-pulse" />,
+  },
+  {
+    id: 6,
+    title: "Express",
+    text: "Minimal API routing and middleware for robust web services.",
+    icon: <Route className="size-13 md:size-15 hover-style animate-pulse" />,
+  },
 ];
 export const projects = [
   {
@@ -98,5 +113,12 @@ export const projects = [
     icon: <FormInputIcon className="size-18 animate-pulse text-white/90" />,
     text: "Form application with multiple stages that could be used for collecting different types of inputs from users, enhanced with fetching from api endpoints",
     title: "Multi Stages Form",
+  },
+  {
+    id: 5,
+    url: "https://goaltracker-m.netlify.app/",
+    icon: <Goal className="size-18 animate-pulse text-white/90" />,
+    text: "Goal tracking app for setting targets, monitoring progress, and staying accountable.",
+    title: "Goal Tracker",
   },
 ];

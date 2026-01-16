@@ -87,7 +87,7 @@ export const projects = [
     url: "https://personal-finance-dashboard-nine-rho.vercel.app/",
     icon: <CreditCard className="size-9" />,
     github: "https://github.com/Muhammad-Morgan/Personal-Finance-Dashboard",
-    text: "Finance dashboard to track income, expenses, and budgets with category insights, monthly summaries, and date-based filtering.",
+    text: "Finance dashboard to track income, expenses, and budgets with category insights, monthly summaries, and date-based filtering. Built with Next.js and TypeScript using Prisma + PostgreSQL and fully typed APIs. Focused on performance and UX with efficient data fetching, caching, and validation. Designed for scalability with a clean schema, reusable components, and extensible features.",
     title: "Personal Finance Dashboard",
   },
   {

@@ -5,7 +5,7 @@ import Projects from "@/components/Layouts/Projects";
 import Tech from "@/components/Layouts/Tech";
 export default function Home() {
   return (
-    <main className="w-full items-center justify-between">
+    <main className="w-full">
       <Hero />
       <Tech />
       <Projects />

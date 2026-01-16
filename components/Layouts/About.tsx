@@ -3,58 +3,75 @@ import Image from "next/image";
 import aboutImg from "@/public/assets/about.svg";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+
 const About = () => {
   return (
-    <section id="about-me" className="bg-[#000011] py-20">
-      <h1 className="text-3xl font-semibold text-neutral-400 flex mx-auto justify-center gap-3 tracking-wider mb-10">
-        Code and Coffee
-        <User2Icon className="size-10 text-white" />
-      </h1>
-      <div className="align-element grid md:grid-cols-2 items-center gap-4 mb-8">
-        <Image src={aboutImg} alt="about" className="w-full h-64" />
-        <article>
-          <p className="text-white/80 mt-8 ps-4 md:ps-0 leading-loose">
-            <span className="block mb-3">Hi ! My name is Muhammad Morgan.</span>
-            <span className="block">
-              I build modern, responsive web applications using Next JS,
-              TypeScript and Tailwind CSS, by writing clean code, optimizing the
-              application performence and ensure scalability.
-            </span>
+    <section id="about-me" className="section section-light">
+      <div className="section-inner grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="surface-panel overflow-hidden p-6 transition-shadow hover:shadow-[0_22px_45px_rgba(15,12,10,0.18)]">
+          <Image
+            src={aboutImg}
+            alt="About illustration"
+            className="h-auto w-full"
+          />
+        </div>
+        <div className="space-y-6">
+          <div>
+            <p className="text-kicker">About</p>
+            <h2 className="font-display flex items-center gap-3 text-3xl sm:text-4xl">
+              Code and Coffee <User2Icon className="size-6 text-accent" />
+            </h2>
+          </div>
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            Hi, my name is Muhammad Morgan. I am a software engineer building
+            Next.js and MERN applications with clean architecture, performance
+            optimization, and scalable delivery.
           </p>
-        </article>
-      </div>
-      <div
-        id="contact"
-        className="max-w-3xl mx-auto p-5 grid items-center justify-center sm:grid-cols-2 sm:gap-x-3"
-      >
-        <p className="text-neutral-400">
-          <b className="mr-2 animate-in">
-            Ready to build the website that expresses you and your business ?
-          </b>
-          Send me an email
-        </p>
-        <ul className="mt-4 h-full">
-          <li className="flex gap-x-3 mb-2">
-            <Mail className="size-6 text-primary" />
-            <Link
-              href="https://mailto:morganmuhammad158@gmail.com"
-              className="underline text-neutral-400"
-            >
-              morganmuhammad158@gmail.com
-            </Link>
-          </li>
-          <li className="flex gap-x-3">
-            <FaWhatsapp className="size-6 text-primary" />
-            <Link
-              href="https://api.whatsapp.com/send?phone=201289737637"
-              className="underline text-neutral-400"
-            >
-              +201289737637
-            </Link>
-          </li>
-        </ul>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              "Clean component architecture",
+              "Motion and interaction design",
+              "Pixel-precise responsive layouts",
+              "Delivery with performance in mind",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-border/70 bg-card/60 p-4 text-sm text-muted-foreground transition-colors hover:border-accent"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+          <div id="contact" className="surface-panel space-y-4 p-6">
+            <p className="text-sm text-muted-foreground">
+              Ready to build the website that expresses you and your business?
+              Send me an email or reach out on WhatsApp.
+            </p>
+            <ul className="space-y-3 text-sm rounded-2xl border border-border/70 p-4 transition-colors hover:border-accent">
+              <li className="flex items-center gap-3 text-foreground/80">
+                <Mail className="size-5 text-accent" />
+                <Link
+                  href="mailto:morganmuhammad158@gmail.com"
+                  className="underline decoration-accent/60 underline-offset-4 hover:text-accent"
+                >
+                  morganmuhammad158@gmail.com
+                </Link>
+              </li>
+              <li className="flex items-center gap-3 text-foreground/80">
+                <FaWhatsapp className="size-5 text-accent" />
+                <Link
+                  href="https://api.whatsapp.com/send?phone=201289737637"
+                  className="underline decoration-accent/60 underline-offset-4 hover:text-accent"
+                >
+                  +201289737637
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
+
 export default About;

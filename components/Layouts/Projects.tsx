@@ -3,29 +3,40 @@ import { projects } from "@/lib/projectsUtils";
 import { TbWorldWww } from "react-icons/tb";
 import { FaGithubSquare } from "react-icons/fa";
 import Link from "next/link";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="relative overflow-hidden space-bg space-bg-dense section text-white py-20"
-    >
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(125deg,#050717_0%,rgba(5,7,23,0.95)_45%,rgba(6,11,31,0.85)_100%)]" />
-      <div className="relative z-10 space-y-4">
-        <h1 className="text-3xl font-semibold text-neutral-400 flex mx-auto justify-center gap-3 tracking-wider mb-8">
-          Projects
-          <Laptop className="size-10 text-white" />
-        </h1>
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 py-16">
-          {projects.map((project) => {
-            return <ProjectCard key={project.id} {...project} />;
-          })}
+    <section id="projects" className="section section-light">
+      <div className="section-inner space-y-8">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-kicker">Selected</p>
+            <h2 className="font-display flex items-center gap-3 text-3xl sm:text-4xl">
+              Projects <Laptop className="size-6 text-accent" />
+            </h2>
+          </div>
+          <p className="max-w-md text-sm text-muted-foreground">
+            A snapshot of recent builds with focus on clean UX, performance, and
+            scalable systems.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              featured={index === 0}
+              index={index}
+            />
+          ))}
         </div>
       </div>
     </section>
   );
 };
-type ProjectCardProps = {
+
+type Project = {
   id: number;
   url: string;
   icon: ReactNode;
@@ -33,38 +44,86 @@ type ProjectCardProps = {
   text: string;
   title: string;
 };
-const ProjectCard = ({
-  id,
-  url,
-  icon,
-  github,
-  text,
-  title,
-}: ProjectCardProps) => {
+
+type ProjectCardProps = {
+  project: Project;
+  featured: boolean;
+  index: number;
+};
+
+const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
+  const { id, url, icon, github, text, title } = project;
+  const isPersonalFinance = id === 1;
+  const label = featured ? "Featured" : `Project 0${id}`;
   return (
     <article
-      className={`border-primary border rounded-lg hover-style w-full max-w-sm mx-auto`}
+      className={`flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-[0_18px_35px_rgba(15,12,10,0.12)] reveal transition-colors hover:border-accent ${
+        featured ? "md:col-span-2 lg:row-span-2" : ""
+      }`}
+      style={{ animationDelay: `${index * 0.08}s` }}
     >
-      <div className="mx-auto w-100 h-50 rounded-t-lg p-4 flex items-center bg-black/5">
-        <span className="border-3 p-4 border-primary bg-primary rounded-lg mx-auto">
+      <div className="flex items-start justify-between gap-4">
+        <span
+          className={`flex items-center justify-center rounded-2xl bg-accent/10 text-accent ring-1 ring-accent/30 ${
+            isPersonalFinance ? "size-14" : "size-12"
+          }`}
+        >
           {icon}
         </span>
+        <span className="text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
+          {label}
+        </span>
       </div>
-      <div className="capitalize p-3">
-        <h2 className="text-lg tracking-wider font-semibold text-primary">
+      <div className={`mt-5 ${featured ? "space-y-4" : "space-y-3"}`}>
+        <h3
+          className={`font-display text-foreground ${
+            featured ? "text-2xl sm:text-3xl" : "text-lg"
+          }`}
+        >
           {title}
-        </h2>
-        <p className="text-white text-sm my-3">{text}</p>
-        <div className="flex gap-x-3">
-          <Link href={url}>
-            <TbWorldWww className="text-white/75 size-8 hover:text-primary duration-300" />
+        </h3>
+        <p
+          className={`${
+            featured ? "text-base" : "text-sm"
+          } text-muted-foreground`}
+        >
+          {text}
+        </p>
+      </div>
+      <div
+        className={`mt-6 flex flex-wrap items-center gap-4 ${
+          isPersonalFinance ? "text-base" : "text-sm"
+        }`}
+      >
+        <Link
+          href={url}
+          className={`inline-flex items-center gap-2 text-foreground/80 transition hover:text-accent ${
+            isPersonalFinance
+              ? "rounded-full border border-border/70 px-3 py-2"
+              : ""
+          }`}
+        >
+          <TbWorldWww className={isPersonalFinance ? "size-6" : "size-5"} />
+          Live
+        </Link>
+        {github ? (
+          <Link
+            href={github}
+            className={`inline-flex items-center gap-2 text-foreground/80 transition hover:text-accent ${
+              isPersonalFinance
+                ? "rounded-full border border-border/70 px-3 py-2"
+                : ""
+            }`}
+          >
+            <FaGithubSquare
+              className={isPersonalFinance ? "size-6" : "size-5"}
+            />
+            Code
           </Link>
-          <Link href={github ?? "#"}>
-            <FaGithubSquare className="text-white/75 size-8 hover:text-primary duration-300" />
-          </Link>
-        </div>
+        ) : null}
       </div>
     </article>
   );
 };
+
 export default Projects;

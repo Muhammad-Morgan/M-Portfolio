@@ -30,7 +30,7 @@ const LinksDropdown = ({
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="w-60 space-y-1 rounded-2xl border border-[#0e3c58]/10 bg-white/90 p-2 shadow-[0_20px_50px_rgba(10,32,48,0.18)] backdrop-blur-xl lg:hidden"
+        className="w-60 space-y-1 rounded-2xl border border-border bg-card/95 p-2 shadow-[0_20px_50px_rgba(0,0,0,0.45)] backdrop-blur-xl lg:hidden"
         align="start"
         sideOffset={25}
       >
@@ -42,9 +42,9 @@ const LinksDropdown = ({
               key={link.id}
               className={`group rounded-xl px-0.5 text-sm font-medium ${
                 hash === link.href.slice(1)
-                  ? "bg-[#0e3c58]/10 text-[#0e3c58]"
-                  : "text-[#0e3c58]"
-              } transition-colors hover:bg-[#0e3c58]/10 hover:text-[#0e3c58] focus:bg-[#0e3c58]/10`}
+                  ? "bg-muted text-foreground"
+                  : "text-muted-foreground"
+              } transition-colors hover:bg-muted hover:text-foreground focus:bg-muted`}
             >
               <Link
                 onClick={() => setHash(link.href.slice(1))}
@@ -53,7 +53,7 @@ const LinksDropdown = ({
                   hash === link.href.slice(1) ? "translate-x-1" : ""
                 }`}
               >
-                <span className="flex size-7.5 items-center justify-center rounded-full bg-[#0e3c58]/10 text-[#0e3c58] shadow-inner">
+                <span className="flex size-8 items-center justify-center rounded-full bg-accent/15 text-accent shadow-inner">
                   {link.icon}
                 </span>
                 <span className="capitalize">{link.label}</span>

@@ -14,7 +14,7 @@ import {
   Server,
   StoreIcon,
   User,
-  CreditCard
+  CreditCard,
 } from "lucide-react";
 export const links = [
   {
@@ -48,54 +48,52 @@ export const skills = [
     id: 1,
     title: "React",
     text: "Building reusable components with predictable state and clean structure.",
-    icon: <Atom className="size-13 md:size-15 hover-style animate-pulse" />,
+    icon: <Atom className="size-7" />,
   },
   {
     id: 2,
     title: "Next.js",
     text: "App Router, Server Components, routing, and performance-focused rendering.",
-    icon: <Layers className="size-13 md:size-15 hover-style animate-pulse" />,
+    icon: <Layers className="size-7" />,
   },
   {
     id: 3,
     title: "TypeScript",
     text: "Type-safe codebases that reduce bugs and improve maintainability.",
-    icon: <Braces className="size-13 md:size-15 hover-style animate-pulse" />,
+    icon: <Braces className="size-7" />,
   },
   {
     id: 4,
     title: "Tailwind CSS",
     text: "Utility-first styling for consistent, responsive layouts.",
-    icon: (
-      <Paintbrush className="size-13 md:size-15 hover-style animate-pulse" />
-    ),
+    icon: <Paintbrush className="size-7" />,
   },
   {
     id: 5,
     title: "Node.js",
     text: "Event-driven runtime for building fast, scalable server-side apps.",
-    icon: <Server className="size-13 md:size-15 hover-style animate-pulse" />,
+    icon: <Server className="size-7" />,
   },
   {
     id: 6,
     title: "Express",
     text: "Minimal API routing and middleware for robust web services.",
-    icon: <Route className="size-13 md:size-15 hover-style animate-pulse" />,
+    icon: <Route className="size-7" />,
   },
 ];
 export const projects = [
   {
     id: 1,
     url: "https://personal-finance-dashboard-nine-rho.vercel.app/",
-    icon: <CreditCard className="size-18 animate-pulse text-white/90" />,
+    icon: <CreditCard className="size-9" />,
     github: "https://github.com/Muhammad-Morgan/Personal-Finance-Dashboard",
-    text: "Finance dashboard that allows to create and keep track on you spent and filter them based on dates",
+    text: "Finance dashboard to track income, expenses, and budgets with category insights, monthly summaries, and date-based filtering.",
     title: "Personal Finance Dashboard",
   },
   {
     id: 2,
     url: "https://next-store-roan-kappa.vercel.app/",
-    icon: <StoreIcon className="size-18 animate-pulse text-white/90" />,
+    icon: <StoreIcon className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Next-Store",
     text: "E-Commerce app that lets user creates an account, view products, and enjoy the the full shopping experience with other nifty features",
     title: "Next Store",
@@ -103,7 +101,7 @@ export const projects = [
   {
     id: 3,
     url: "https://jobify-tracker-brown.vercel.app/",
-    icon: <BriefcaseBusiness className="size-18 animate-pulse text-white/90" />,
+    icon: <BriefcaseBusiness className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Jobify",
     text: "Job tracking app with which a user can register and then post various jobs, apply to the desired ones and keep tracking their status for the last 6-months",
     title: "Jobify",
@@ -111,7 +109,7 @@ export const projects = [
   {
     id: 4,
     url: "https://github-users-eomn.vercel.app/",
-    icon: <SearchIcon className="size-18 animate-pulse text-white/90" />,
+    icon: <SearchIcon className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Github-Users",
     text: "Apollo Client-based app that allows user to search any Github user and gets only specific fields from the huge api response, and view their follower, following, repos number.",
     title: "Github User Search",
@@ -119,14 +117,14 @@ export const projects = [
   {
     id: 5,
     url: "https://comply-task.vercel.app/",
-    icon: <FormInputIcon className="size-18 animate-pulse text-white/90" />,
+    icon: <FormInputIcon className="size-7" />,
     text: "Form application with multiple stages that could be used for collecting different types of inputs from users, enhanced with fetching from api endpoints",
     title: "Multi Stages Form",
   },
   {
-    id: 5,
+    id: 6,
     url: "https://goaltracker-m.netlify.app/",
-    icon: <Goal className="size-18 animate-pulse text-white/90" />,
+    icon: <Goal className="size-7" />,
     text: "Goal tracking app for setting targets, monitoring progress, and staying accountable.",
     title: "Goal Tracker",
   },

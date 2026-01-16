@@ -84,14 +84,21 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    url: "https://personal-finance-dashboard-nine-rho.vercel.app/",
-    icon: <CreditCard className="size-9" />,
-    github: "https://github.com/Muhammad-Morgan/Personal-Finance-Dashboard",
-    text: "Finance dashboard to track income, expenses, and budgets with category insights, monthly summaries, and date-based filtering. Built with Next.js and TypeScript using Prisma + PostgreSQL and fully typed APIs. Focused on performance and UX with efficient data fetching, caching, and validation. Designed for scalability with a clean schema, reusable components, and extensible features.",
-    title: "Personal Finance Dashboard",
+    url: "https://goaltracker-m.netlify.app/",
+    icon: <Goal className="size-9" />,
+    text: "Goal tracking app for setting targets, monitoring progress, and staying accountable. Supports recurring goals with daily, weekly, and custom frequencies. Tracks progress through date-based entries with clear status and completion logic. Built with a scalable schema and focus on UX, performance, and data consistency.",
+    title: "Goal Tracker",
   },
   {
     id: 2,
+    url: "https://personal-finance-dashboard-nine-rho.vercel.app/",
+    icon: <CreditCard className="size-7" />,
+    github: "https://github.com/Muhammad-Morgan/Personal-Finance-Dashboard",
+    text: "Finance dashboard to track income, expenses, and budgets with category insights, monthly summaries, and date-based filtering. Built with Next.js and TypeScript using Prisma + PostgreSQL and fully typed APIs.",
+    title: "",
+  },
+  {
+    id: 3,
     url: "https://next-store-roan-kappa.vercel.app/",
     icon: <StoreIcon className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Next-Store",
@@ -99,7 +106,7 @@ export const projects = [
     title: "Next Store",
   },
   {
-    id: 3,
+    id: 4,
     url: "https://jobify-tracker-brown.vercel.app/",
     icon: <BriefcaseBusiness className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Jobify",
@@ -107,7 +114,7 @@ export const projects = [
     title: "Jobify",
   },
   {
-    id: 4,
+    id: 5,
     url: "https://github-users-eomn.vercel.app/",
     icon: <SearchIcon className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Github-Users",
@@ -115,17 +122,10 @@ export const projects = [
     title: "Github User Search",
   },
   {
-    id: 5,
+    id: 6,
     url: "https://comply-task.vercel.app/",
     icon: <FormInputIcon className="size-7" />,
     text: "Form application with multiple stages that could be used for collecting different types of inputs from users, enhanced with fetching from api endpoints",
     title: "Multi Stages Form",
-  },
-  {
-    id: 6,
-    url: "https://goaltracker-m.netlify.app/",
-    icon: <Goal className="size-7" />,
-    text: "Goal tracking app for setting targets, monitoring progress, and staying accountable.",
-    title: "Goal Tracker",
   },
 ];

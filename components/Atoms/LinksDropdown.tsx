@@ -23,7 +23,7 @@ const LinksDropdown = ({
         <Button
           variant="ghost"
           size="icon"
-          className="border border-border/70 rounded-lg hover:border-accent duration-150 cursor-pointer"
+          className="border border-border/70 rounded-md hover:border-accent duration-150 cursor-pointer"
         >
           <AlignLeft className="size-5" />
           <span className="sr-only">Toggle links</span>

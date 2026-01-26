@@ -44,7 +44,7 @@ const LinksDropdown = ({
                 hash === link.href.slice(1)
                   ? "bg-muted"
                   : "text-muted-foreground"
-              } transition-colors hover:bg-muted hover:text-foreground focus:bg-muted`}
+              } transition-colors hover:bg-muted focus:bg-muted`}
             >
               <Link
                 onClick={() => setHash(link.href.slice(1))}

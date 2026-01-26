@@ -31,7 +31,7 @@ const Navbar = () => {
               alt="MM logo"
               width={57}
               height={57}
-              className="object-cover opacity-85 transition duration-150 hover:scale-105 hover:opacity-100"
+              className="object-cover opacity-85 transition duration-150 hover:scale-105 hover:opacity-100 hidden lg:block"
               // priority
               unoptimized
             />
@@ -41,7 +41,7 @@ const Navbar = () => {
               alt="MM logo"
               width={60}
               height={60}
-              className="object-cover opacity-85 transition duration-150 hover:scale-105 hover:opacity-100"
+              className="object-cover opacity-85 transition duration-150 hover:scale-105 hover:opacity-100 hidden lg:block"
               // priority
               unoptimized
             />

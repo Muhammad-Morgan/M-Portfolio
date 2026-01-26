@@ -23,7 +23,7 @@ const LinksDropdown = ({
         <Button
           variant="ghost"
           size="icon"
-          className="border border-border/70 rounded-xl hover:border-accent duration-150 cursor-pointer"
+          className="border border-border/70 rounded-lg hover:border-accent duration-150 cursor-pointer"
         >
           <AlignLeft className="size-5" />
           <span className="sr-only">Toggle links</span>
@@ -42,7 +42,7 @@ const LinksDropdown = ({
               key={link.id}
               className={`group rounded-xl px-0.5 text-sm font-medium ${
                 hash === link.href.slice(1)
-                  ? "bg-muted text-foreground"
+                  ? "bg-muted"
                   : "text-muted-foreground"
               } transition-colors hover:bg-muted hover:text-foreground focus:bg-muted`}
             >

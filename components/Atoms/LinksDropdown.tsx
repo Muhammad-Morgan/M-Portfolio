@@ -49,14 +49,14 @@ const LinksDropdown = ({
               <Link
                 onClick={() => setHash(link.href.slice(1))}
                 href={link.href}
-                className={`flex w-full items-center gap-x-2 rounded-lg px-1 transition-all group-hover:translate-x-1 hover:text-muted-foreground ${
+                className={`flex w-full items-center gap-x-2 rounded-lg px-1 hover:text-muted-foreground transition-all group-hover:translate-x-1 ${
                   hash === link.href.slice(1) ? "translate-x-1" : ""
                 }`}
               >
                 <span className="flex size-8 items-center justify-center rounded-full bg-accent/15 text-accent shadow-inner">
                   {link.icon}
                 </span>
-                <span className="capitalize">{link.label}</span>
+                <span className="capitalize hover:text-muted-foreground">{link.label}</span>
               </Link>
             </DropdownMenuItem>
           );

@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav className="relative z-10 border-b border-border/70 bg-card/90 shadow-[0_10px_30px_var(--shadow-soft)] backdrop-blur-xl supports-[backdrop-filter:blur(16px)]:bg-card/70 transition-colors">
       <section className="section-inner mx-auto flex items-center justify-between px-[clamp(1.25rem,6vw,6rem)] py-4">
-        <Link href="#" className="flex items-center gap-x-3 {mounted && resolvedTheme === "dark" ? (
+        <Link href="#" className="flex items-center gap-x-3 hidden lg:block" {mounted && resolvedTheme === "dark" ? (
             <Image
               src={navlogoDark}
               alt="MM logo"

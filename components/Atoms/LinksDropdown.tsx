@@ -44,12 +44,12 @@ const LinksDropdown = ({
                 hash === link.href.slice(1)
                   ? "bg-muted"
                   : "text-muted-foreground"
-              } transition-colors hover:bg-muted hover:text-muted-foreground focus:bg-muted`}
+              } transition-colors hover:bg-muted focus:bg-muted`}
             >
               <Link
                 onClick={() => setHash(link.href.slice(1))}
                 href={link.href}
-                className={`flex w-full items-center gap-x-2 rounded-lg px-1 transition-all group-hover:translate-x-1 ${
+                className={`flex w-full items-center gap-x-2 rounded-lg px-1 transition-all group-hover:translate-x-1 hover:text-muted-foreground ${
                   hash === link.href.slice(1) ? "translate-x-1" : ""
                 }`}
               >

@@ -9,6 +9,7 @@ import {
   Laptop,
   Layers,
   Paintbrush,
+  PlayCircle,
   Route,
   SearchIcon,
   Server,
@@ -31,13 +32,19 @@ export const links = [
   },
   {
     id: 3,
+    label: "demos",
+    href: "#demos",
+    icon: <PlayCircle />,
+  },
+  {
+    id: 4,
     label: "projects",
     href: "#projects",
     icon: <Laptop />,
   },
 
   {
-    id: 4,
+    id: 5,
     label: "about me",
     href: "#about-me",
     icon: <User />,

@@ -13,7 +13,7 @@ const Tech = () => {
               Tech Stack <Code2 className="size-6 text-accent" />
             </h2>
           </div>
-          <p className="text-sm text-muted-foreground">
+          <p className="border-l-2 border-accent/70 pl-4 text-sm text-muted-foreground">
             Tools and practices I use to build fast, resilient web apps with
             clean developer experience.
           </p>
@@ -48,7 +48,7 @@ type TechCardProps = {
 
 const TechCard = ({ id, icon, title, text, index }: TechCardProps) => (
   <article
-    className="rounded-2xl border border-border/70 bg-card/70 p-6 shadow-[0_18px_35px_rgba(0,0,0,0.35)] reveal transition-colors hover:border-accent"
+    className="rounded-2xl border border-border/70 bg-card/70 p-6 shadow-[0_18px_35px_var(--shadow-deep)] reveal transition-colors hover:border-accent"
     style={{ animationDelay: `${index * 0.08}s` }}
   >
     <div className="flex items-center justify-between">

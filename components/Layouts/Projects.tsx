@@ -4,7 +4,8 @@ import { TbWorldWww } from "react-icons/tb";
 import { FaGithubSquare } from "react-icons/fa";
 import Link from "next/link";
 import type { ReactNode } from "react";
-
+import projectLogo from "@/public/assets/project.svg";
+import Image from "next/image";
 const Projects = () => {
   return (
     <section id="projects" className="section section-light">
@@ -57,7 +58,7 @@ const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
   const label = featured ? "Featured" : `Project 0${id}`;
   return (
     <article
-      className={`flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-[0_18px_35px_rgba(15,12,10,0.12)] reveal transition-colors hover:border-accent ${
+      className={`flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-[0_18px_35px_var(--shadow-soft)] reveal transition-colors hover:border-accent ${
         featured ? "md:col-span-2 lg:row-span-2" : ""
       }`}
       style={{ animationDelay: `${index * 0.08}s` }}
@@ -75,6 +76,11 @@ const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
         </span>
       </div>
       <div className={`mt-5 ${featured ? "space-y-4" : "space-y-3"}`}>
+        {featured && (
+          <div className="flex justify-center">
+            <Image src={projectLogo} alt="project-logo" width={250} />
+          </div>
+        )}
         <h3
           className={`font-display text-foreground ${
             featured ? "text-2xl sm:text-3xl" : "text-lg"

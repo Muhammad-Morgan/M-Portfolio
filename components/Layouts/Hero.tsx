@@ -12,20 +12,21 @@ const Hero = () => {
     <section id="overview" className="relative section pt-28 overflow-hidden">
       <div className="hero-glow" aria-hidden="true" />
       <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0)_60%)]"
+        className="pointer-events-none absolute inset-0 hero-wash"
         aria-hidden="true"
       />
       <div className="section-inner grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="space-y-7">
-          <p className="text-kicker reveal">Software Engineer</p>
-          <p className="text-[10px] uppercase tracking-[0.45em] text-accent/80 reveal reveal-delay-1">
+          <p className="text-kicker reveal">Full Stack Engineer</p>
+          <p className="text-md uppercase tracking-[0.45em] text-accent/80 reveal reveal-delay-1">
             Next.js | MERN
           </p>
           <div className="space-y-4">
             <h1 className="font-display text-4xl leading-tight sm:text-5xl lg:text-6xl reveal reveal-delay-1">
-              Muhammad Morgan
+              <span className="font-extrabold">Muhammad</span>{" "}
+              <span className="font-extrabold text-accent">Morgan</span>
             </h1>
-            <p className="max-w-xl text-lg text-muted-foreground reveal reveal-delay-2">
+            <p className="max-w-xl border-l-2 border-accent/70 pl-4 text-lg text-muted-foreground reveal reveal-delay-2">
               Software engineer building Next.js and MERN products with clean
               UI, scalable APIs, and performance-first delivery.
             </p>
@@ -40,7 +41,7 @@ const Hero = () => {
               </Link>
             </Button>
             <Button
-              variant="outline"
+              variant="ghost"
               asChild
               className="border-border/80 text-foreground hover:border-accent"
             >
@@ -64,14 +65,12 @@ const Hero = () => {
             ].map((item) => (
               <div
                 key={item.label}
-                className="rounded-2xl border border-border/70 bg-card/60 p-4"
+                className="rounded-2xl border border-border/70 bg-card/60 p-4 transition-colors hover:border-accent"
               >
                 <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                   {item.label}
                 </p>
-                <p className="mt-2 text-sm text-foreground/80">
-                  {item.value}
-                </p>
+                <p className="mt-2 text-sm text-foreground/80">{item.value}</p>
               </div>
             ))}
           </div>
@@ -104,7 +103,7 @@ const Hero = () => {
         <div className="grid gap-6 lg:items-start">
           <div className="relative reveal reveal-delay-2">
             <div
-              className="absolute -inset-8 rounded-[32px] bg-[radial-gradient(circle,rgba(242,184,75,0.18),transparent_70%)] blur-2xl opacity-70"
+              className="absolute -inset-8 rounded-[32px] hero-spotlight blur-2xl opacity-70"
               aria-hidden="true"
             />
             <div className="surface-panel overflow-hidden p-6">
@@ -115,7 +114,7 @@ const Hero = () => {
               />
             </div>
           </div>
-          <div className="surface-panel p-5 reveal reveal-delay-3">
+          <div className="surface-panel p-5 reveal reveal-delay-3 transition-colors hover:border-accent hover:shadow-[0_24px_50px_var(--shadow-accent)]">
             <p className="text-kicker">Snapshot</p>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-center justify-between gap-4">

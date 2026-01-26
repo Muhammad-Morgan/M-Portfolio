@@ -55,6 +55,7 @@ canvas {
   --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -77,60 +78,188 @@ canvas {
 }
 
 :root {
-  color-scheme: dark;
-  --secondary-100: #0b0b0b;
-  --secondary-200: #111111;
-  --secondary-300: #1a1a1a;
-  --secondary-400: #222222;
-  --secondary-500: #2a2a2a;
-  --secondary-600: #333333;
-  --secondary-700: #3d3d3d;
-  --secondary-800: #464646;
-  --secondary-900: #555555;
-  --neutral-50: #f8f6f1;
-  --neutral-100: #f2ede4;
-  --neutral-200: #e2dbd0;
-  --neutral-300: #c6bdb0;
-  --neutral-400: #a4998b;
-  --neutral-500: #7f7669;
-  --neutral-600: #5f584e;
-  --neutral-700: #413b34;
-  --neutral-800: #231f1b;
-  --neutral-900: #0e0b09;
+  color-scheme: light;
+  --secondary-100: #f7f8fc;
+  --secondary-200: #eef1f7;
+  --secondary-300: #e2e7f1;
+  --secondary-400: #d4dbe8;
+  --secondary-500: #c6cede;
+  --secondary-600: #aeb8d0;
+  --secondary-700: #8e99b4;
+  --secondary-800: #6a748d;
+  --secondary-900: #4a5264;
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1f2937;
+  --neutral-900: #0f172a;
   --radius: 0.95rem;
-  --background: #050505;
-  --foreground: #f5f1e8;
-  --card: #0b0b0b;
-  --card-foreground: #f5f1e8;
-  --popover: #0b0b0b;
-  --popover-foreground: #f5f1e8;
-  --primary: #050505;
-  --primary-foreground: #f5f1e8;
-  --secondary: #131313;
-  --secondary-foreground: #e6e0d6;
-  --muted: #151515;
-  --muted-foreground: #b5ac9f;
-  --accent: #d08b3f;
-  --accent-foreground: #0c0a08;
-  --destructive: #d95c51;
-  --border: #242424;
-  --input: #2a2a2a;
-  --ring: #d08b3f;
-  --chart-1: #d08b3f;
-  --chart-2: #b2753b;
-  --chart-3: #8f5b2d;
-  --chart-4: #e2b074;
-  --chart-5: #c06a3d;
-  --sidebar: #0b0b0b;
-  --sidebar-foreground: #f5f1e8;
-  --sidebar-primary: #d08b3f;
-  --sidebar-primary-foreground: #0c0a08;
-  --sidebar-accent: #1b1b1b;
-  --sidebar-accent-foreground: #f5f1e8;
-  --sidebar-border: #242424;
-  --sidebar-ring: #d08b3f;
+  --background: #e9eef6;
+  --foreground: #1f2a37;
+  --card: #ffffff;
+  --card-foreground: #1f2a37;
+  --popover: #ffffff;
+  --popover-foreground: #1f2a37;
+  --primary: #1f2a37;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f4fa;
+  --secondary-foreground: #3a4352;
+  --muted: #f2f5fb;
+  --muted-foreground: #5b6573;
+  --accent: #6c5dd3;
+  --accent-foreground: #ffffff;
+  --destructive: #e15a67;
+  --destructive-foreground: #ffffff;
+  --border: #d6dde8;
+  --input: #d6dde8;
+  --ring: #6c5dd3;
+  --chart-1: #6c5dd3;
+  --chart-2: #4f7bd9;
+  --chart-3: #38b2ac;
+  --chart-4: #8a7cf7;
+  --chart-5: #ef8a62;
+  --sidebar: #f6f8fc;
+  --sidebar-foreground: #1f2a37;
+  --sidebar-primary: #6c5dd3;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eef1f7;
+  --sidebar-accent-foreground: #1f2a37;
+  --sidebar-border: #d6dde8;
+  --sidebar-ring: #6c5dd3;
+  --grid-line: rgba(31, 42, 55, 0.08);
+  --grid-size: 64px;
+  --ambient-1: rgba(108, 93, 211, 0.18);
+  --ambient-2: rgba(255, 255, 255, 0.7);
+  --hero-wash-start: rgba(255, 255, 255, 0.8);
+  --hero-wash-end: rgba(255, 255, 255, 0);
+  --hero-spotlight: rgba(108, 93, 211, 0.22);
+  --hero-glow-1: rgba(108, 93, 211, 0.22);
+  --hero-glow-2: rgba(255, 255, 255, 0.7);
+  --surface-panel-start: rgba(255, 255, 255, 0.95);
+  --surface-panel-end: rgba(255, 255, 255, 0.7);
+  --surface-grid-line: rgba(31, 42, 55, 0.06);
+  --surface-grid-line-strong: rgba(31, 42, 55, 0.1);
+  --surface-grid-accent: rgba(108, 93, 211, 0.12);
+  --section-light-bg: #f7f9fd;
+  --section-light-foreground: #1f2a37;
+  --section-light-card: #ffffff;
+  --section-light-card-foreground: #1f2a37;
+  --section-light-muted: #eef2f8;
+  --section-light-muted-foreground: #5b6573;
+  --section-light-border: #d7dfea;
+  --section-light-input: #d7dfea;
+  --shadow-soft: rgba(15, 23, 42, 0.12);
+  --shadow-medium: rgba(15, 23, 42, 0.18);
+  --shadow-strong: rgba(15, 23, 42, 0.28);
+  --shadow-deep: rgba(0, 0, 0, 0.35);
+  --shadow-popover: rgba(15, 23, 42, 0.24);
+  --shadow-accent: rgba(108, 93, 211, 0.2);
+  --particle-color: #6c5dd3;
+  --particle-link: #6c5dd3;
 }
+.dark {
+  color-scheme: dark;
 
+  /* Secondary (deep blue-gray ramp) */
+  --secondary-100: #0b1220;
+  --secondary-200: #0f172a;
+  --secondary-300: #111c33;
+  --secondary-400: #172340;
+  --secondary-500: #1f2a44;
+  --secondary-600: #273454;
+  --secondary-700: #2f3d63;
+  --secondary-800: #394878;
+  --secondary-900: #475a91;
+
+  /* Neutral (kept same) */
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1f2937;
+  --neutral-900: #0f172a;
+
+  --background: #1b2430;
+  --foreground: #e7edf6;
+
+  --card: #253244;
+  --card-foreground: #f8fafc;
+
+  --popover: #253244;
+  --popover-foreground: #f8fafc;
+
+  --primary: #8b6be8;
+  --primary-foreground: #f7f5ff;
+
+  --secondary: #2a3648;
+  --secondary-foreground: #e2e8f0;
+
+  --muted: #223043;
+  --muted-foreground: #b9c3cf;
+
+  --accent: #8b6be8;
+  --accent-foreground: #f7f5ff;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #2f3d52;
+  --input: #2f3d52;
+  --ring: #8b6be8;
+
+  --chart-1: #8b6be8;
+  --chart-2: #5f7dd9;
+  --chart-3: #2fb7b1;
+  --chart-4: #a084f3;
+  --chart-5: #f0926b;
+
+  --sidebar: #1f2a37;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #8b6be8;
+  --sidebar-primary-foreground: #f7f5ff;
+  --sidebar-accent: #243446;
+  --sidebar-accent-foreground: #e7edf6;
+  --sidebar-border: #2f3d52;
+  --sidebar-ring: #8b6be8;
+  --grid-line: rgba(255, 255, 255, 0.05);
+  --ambient-1: rgba(139, 107, 232, 0.25);
+  --ambient-2: rgba(255, 255, 255, 0.08);
+  --hero-wash-start: rgba(255, 255, 255, 0.08);
+  --hero-wash-end: rgba(255, 255, 255, 0);
+  --hero-spotlight: rgba(139, 107, 232, 0.3);
+  --hero-glow-1: rgba(139, 107, 232, 0.35);
+  --hero-glow-2: rgba(255, 255, 255, 0.08);
+  --surface-panel-start: rgba(37, 50, 70, 0.9);
+  --surface-panel-end: rgba(27, 39, 54, 0.92);
+  --surface-grid-line: rgba(255, 255, 255, 0.04);
+  --surface-grid-line-strong: rgba(255, 255, 255, 0.08);
+  --surface-grid-accent: rgba(139, 107, 232, 0.22);
+  --section-light-bg: #1f2c3f;
+  --section-light-foreground: #e7edf6;
+  --section-light-card: #243446;
+  --section-light-card-foreground: #e7edf6;
+  --section-light-muted: #243446;
+  --section-light-muted-foreground: #b4c0d3;
+  --section-light-border: #2f3d52;
+  --section-light-input: #2f3d52;
+  --shadow-soft: rgba(0, 0, 0, 0.35);
+  --shadow-medium: rgba(0, 0, 0, 0.45);
+  --shadow-strong: rgba(0, 0, 0, 0.6);
+  --shadow-deep: rgba(0, 0, 0, 0.7);
+  --shadow-popover: rgba(0, 0, 0, 0.55);
+  --shadow-accent: rgba(139, 107, 232, 0.35);
+  --particle-color: #8b6be8;
+  --particle-link: #8b6be8;
+}
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -152,44 +281,28 @@ canvas {
     inset: -200%;
     pointer-events: none;
     z-index: 0;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
   }
 
   body::before {
-    background-image: radial-gradient(
-        1px 1px at 20% 30%,
-        rgba(255, 255, 255, 0.9) 50%,
-        transparent 60%
-      ),
-      radial-gradient(
-        1px 1px at 60% 70%,
-        rgba(255, 255, 255, 0.85) 50%,
-        transparent 60%
-      ),
-      radial-gradient(
-        1px 1px at 80% 20%,
-        rgba(255, 255, 255, 0.75) 50%,
-        transparent 60%
-      );
-    background-size: 240px 240px;
-    opacity: 0.5;
-    animation: star-drift-1 140s linear infinite;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+    background-repeat: repeat;
+    opacity: 0.65;
   }
 
   body::after {
-    background-image: radial-gradient(
-        2px 2px at 25% 40%,
-        rgba(255, 255, 255, 0.6) 50%,
-        transparent 60%
-      ),
+    background-image:
       radial-gradient(
-        2px 2px at 70% 60%,
-        rgba(255, 255, 255, 0.5) 50%,
-        transparent 60%
-      );
-    background-size: 420px 420px;
-    opacity: 0.3;
-    animation: star-drift-2 180s linear infinite;
+        600px 280px at 18% 10%,
+        var(--ambient-1),
+        transparent 70%
+      ),
+      radial-gradient(520px 260px at 78% 8%, var(--ambient-2), transparent 75%);
+    background-size: 100% 100%;
+    opacity: 0.9;
   }
 
   .section {
@@ -205,17 +318,17 @@ canvas {
   }
 
   .section-light {
-    background-color: #f7f2e8;
-    color: #1a1714;
+    background-color: var(--section-light-bg);
+    color: var(--section-light-foreground);
     color-scheme: light;
-    --background: #f7f2e8;
-    --foreground: #1a1714;
-    --card: #ffffff;
-    --card-foreground: #1a1714;
-    --muted: #efe7db;
-    --muted-foreground: #5d544a;
-    --border: #e2d8cc;
-    --input: #e2d8cc;
+    --background: var(--section-light-bg);
+    --foreground: var(--section-light-foreground);
+    --card: var(--section-light-card);
+    --card-foreground: var(--section-light-card-foreground);
+    --muted: var(--section-light-muted);
+    --muted-foreground: var(--section-light-muted-foreground);
+    --border: var(--section-light-border);
+    --input: var(--section-light-input);
   }
 
   .font-display {
@@ -223,17 +336,19 @@ canvas {
   }
 
   .text-kicker {
-    @apply text-xs uppercase tracking-[0.35em] text-muted-foreground;
+    @apply text-xl uppercase tracking-[0.35em] text-muted-foreground;
   }
 
   .hover-style {
-    transition: transform 250ms ease, box-shadow 250ms ease,
+    transition:
+      transform 250ms ease,
+      box-shadow 250ms ease,
       border-color 250ms ease;
   }
 
   .hover-style:hover {
     transform: translateY(-3px);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 20px 45px var(--shadow-deep);
   }
 
   .surface-panel {
@@ -242,68 +357,74 @@ canvas {
     border-radius: 1.5rem;
     background: linear-gradient(
       160deg,
-      rgba(255, 255, 255, 0.06),
-      rgba(255, 255, 255, 0.01)
+      var(--surface-panel-start),
+      var(--surface-panel-end)
     );
-    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 24px 50px var(--shadow-soft);
   }
 
   .section-light .surface-panel {
-    background: #ffffff;
-    box-shadow: 0 18px 40px rgba(15, 12, 10, 0.12);
+    background: var(--card);
+    box-shadow: 0 18px 40px var(--shadow-soft);
   }
 
   .surface-grid {
     position: relative;
     border: 1px solid var(--border);
     border-radius: 1.5rem;
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0.04) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.04) 1px,
-        transparent 1px
-      ),
+    background-image:
+      linear-gradient(var(--surface-grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--surface-grid-line) 1px, transparent 1px),
       radial-gradient(
         700px 240px at 18% 0%,
-        rgba(242, 184, 75, 0.14),
+        var(--surface-grid-accent),
         transparent 60%
       );
-    background-size: 140px 140px, 140px 140px, 100% 100%;
+    background-size:
+      140px 140px,
+      140px 140px,
+      100% 100%;
     background-position: center;
   }
 
   .section-light .surface-grid {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.05) 1px,
-        transparent 1px
-      ),
+    background-image:
+      linear-gradient(var(--surface-grid-line-strong) 1px, transparent 1px),
       linear-gradient(
         90deg,
-        rgba(0, 0, 0, 0.05) 1px,
+        var(--surface-grid-line-strong) 1px,
         transparent 1px
       );
-    background-size: 140px 140px, 140px 140px;
+    background-size:
+      140px 140px,
+      140px 140px;
   }
 
   .hero-glow {
     position: absolute;
     inset: -20% 0 auto;
     height: 420px;
-    background: radial-gradient(
-        60% 60% at 20% 30%,
-        rgba(242, 184, 75, 0.28),
-        transparent 70%
-      ),
-      radial-gradient(
-        40% 40% at 70% 20%,
-        rgba(255, 255, 255, 0.12),
-        transparent 65%
-      );
+    background:
+      radial-gradient(60% 60% at 20% 30%, var(--hero-glow-1), transparent 70%),
+      radial-gradient(40% 40% at 70% 20%, var(--hero-glow-2), transparent 65%);
     opacity: 0.8;
     pointer-events: none;
+  }
+
+  .hero-wash {
+    background-image: linear-gradient(
+      180deg,
+      var(--hero-wash-start) 0%,
+      var(--hero-wash-end) 60%
+    );
+  }
+
+  .hero-spotlight {
+    background-image: radial-gradient(
+      circle,
+      var(--hero-spotlight),
+      transparent 70%
+    );
   }
 
   .reveal {
@@ -388,7 +509,19 @@ canvas {
 
     body::before,
     body::after {
-      animation: none;
+      background-image:
+        radial-gradient(
+          600px 280px at 18% 10%,
+          var(--ambient-1),
+          transparent 70%
+        ),
+        radial-gradient(
+          520px 260px at 78% 8%,
+          var(--ambient-2),
+          transparent 75%
+        );
+      background-size: 100% 100%;
+      opacity: 0.9;
     }
   }
 }

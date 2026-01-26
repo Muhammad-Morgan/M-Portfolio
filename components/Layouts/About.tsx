@@ -8,12 +8,27 @@ const About = () => {
   return (
     <section id="about-me" className="section section-light">
       <div className="section-inner grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="surface-panel overflow-hidden p-6 transition-shadow hover:shadow-[0_22px_45px_rgba(15,12,10,0.18)]">
+        <div className="surface-panel overflow-hidden p-6 transition-shadow hover:shadow-[0_22px_45px_var(--shadow-medium)] flex flex-col justify-between">
           <Image
             src={aboutImg}
             alt="About illustration"
             className="h-auto w-full"
           />
+          <div className="rounded-2xl border border-border/70 hover:border-accent duration-150 bg-card/70 p-4">
+            <p className="text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
+              Focus Areas
+            </p>
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-center justify-between gap-4">
+                <span>UI systems</span>
+                <span className="text-foreground/80">Design-ready</span>
+              </li>
+              <li className="flex items-center justify-between gap-4">
+                <span>Delivery</span>
+                <span className="text-foreground/80">Performance-first</span>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="space-y-6">
           <div>
@@ -22,7 +37,7 @@ const About = () => {
               Code and Coffee <User2Icon className="size-6 text-accent" />
             </h2>
           </div>
-          <p className="text-sm leading-relaxed text-muted-foreground">
+          <p className="border-l-2 border-accent/70 pl-4 text-sm leading-relaxed text-muted-foreground">
             Hi, my name is Muhammad Morgan. I am a software engineer building
             Next.js and MERN applications with clean architecture, performance
             optimization, and scalable delivery.

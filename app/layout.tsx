@@ -6,6 +6,8 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Molecules/Navbar";
+import ScrollProgress from "@/components/Atoms/ScrollProgress";
+import { ThemeProvider } from "next-themes";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -26,9 +28,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Morgan | Software Engineer",
+  title: "Muhammad Morgan | Full Stack Engineer",
   description:
-    "Muhammad Morgan is a software engineer specializing in Next.js and MERN stack development. Explore his portfolio, projects, and full-stack work.",
+    "Full-stack engineer specializing in Next.js and MERN, delivering clean UI, scalable backends, and performance-first applications.",
 };
 
 export default function RootLayout({
@@ -41,10 +43,18 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${bricolageGrotesque.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        <div className="relative z-10">
-          <Navbar />
-          {children}
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ScrollProgress />
+          <div className="relative z-10">
+            <Navbar />
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

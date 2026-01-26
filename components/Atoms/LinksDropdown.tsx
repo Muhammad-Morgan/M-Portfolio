@@ -30,7 +30,7 @@ const LinksDropdown = ({
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="w-60 space-y-1 rounded-2xl border border-border bg-card/95 p-2 shadow-[0_20px_50px_rgba(0,0,0,0.45)] backdrop-blur-xl lg:hidden"
+        className="w-60 space-y-1 rounded-2xl border border-border bg-card/95 p-2 shadow-[0_20px_50px_var(--shadow-strong)] backdrop-blur-xl lg:hidden"
         align="start"
         sideOffset={25}
       >

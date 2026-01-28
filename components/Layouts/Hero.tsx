@@ -18,9 +18,17 @@ const Hero = () => {
       <div className="section-inner grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="space-y-7">
           <p className="text-kicker reveal">Full Stack Engineer</p>
-          <p className="text-md uppercase tracking-[0.45em] text-accent/80 reveal reveal-delay-1">
-            Next.js | MERN
-          </p>
+          <div className="flex gap-x-8">
+            <p className="text-md uppercase tracking-[0.45em] text-accent/80 reveal reveal-delay-1">
+              Next.js
+            </p>
+            <p className="text-md uppercase tracking-[0.45em] reveal reveal-delay-1 text-muted-foreground">
+              MERN
+            </p>
+            <p className="text-md uppercase tracking-[0.45em] text-accent/80 reveal reveal-delay-1">
+              AWS
+            </p>
+          </div>
           <div className="space-y-4">
             <h1 className="font-display text-4xl leading-tight sm:text-5xl lg:text-6xl reveal reveal-delay-1">
               <span className="font-extrabold">Muhammad</span>{" "}

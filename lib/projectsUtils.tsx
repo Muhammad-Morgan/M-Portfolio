@@ -16,6 +16,7 @@ import {
   StoreIcon,
   User,
   CreditCard,
+  Cloud,
 } from "lucide-react";
 export const links = [
   {
@@ -53,33 +54,33 @@ export const links = [
 export const skills = [
   {
     id: 1,
+    title: "AWS",
+    text: "Architecting event-driven systems with serverless scale and secure-by-design boundaries.",
+    icon: <Cloud className="size-7" />,
+  },
+  {
+    id: 2,
     title: "React",
     text: "Building reusable components with predictable state and clean structure.",
     icon: <Atom className="size-7" />,
   },
   {
-    id: 2,
+    id: 3,
     title: "Next.js",
     text: "App Router, Server Components, routing, and performance-focused rendering.",
     icon: <Layers className="size-7" />,
   },
   {
-    id: 3,
+    id: 4,
     title: "TypeScript",
     text: "Type-safe codebases that reduce bugs and improve maintainability.",
     icon: <Braces className="size-7" />,
   },
   {
-    id: 4,
+    id: 5,
     title: "Tailwind CSS",
     text: "Utility-first styling for consistent, responsive layouts.",
     icon: <Paintbrush className="size-7" />,
-  },
-  {
-    id: 5,
-    title: "Node.js",
-    text: "Event-driven runtime for building fast, scalable server-side apps.",
-    icon: <Server className="size-7" />,
   },
   {
     id: 6,

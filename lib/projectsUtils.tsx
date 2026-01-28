@@ -12,7 +12,6 @@ import {
   PlayCircle,
   Route,
   SearchIcon,
-  Server,
   StoreIcon,
   User,
   CreditCard,

@@ -24,12 +24,12 @@ const ScrollProgress = () => {
       const clamped = Math.min(1, Math.max(0, next));
       setProgress(clamped);
 
-      const percent = clamped * 100;
       let nextIndex = 0;
-      SECTIONS.forEach((_, index) => {
-        const stepPercent =
-          SECTIONS.length > 1 ? (index / (SECTIONS.length - 1)) * 100 : 0;
-        if (percent >= stepPercent) {
+      const threshold = window.scrollY + window.innerHeight * 0.35;
+      SECTIONS.forEach((section, index) => {
+        const el = document.getElementById(section.id);
+        if (!el) return;
+        if (el.offsetTop <= threshold) {
           nextIndex = index;
         }
       });

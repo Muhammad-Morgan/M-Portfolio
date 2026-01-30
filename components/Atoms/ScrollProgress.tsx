@@ -8,13 +8,17 @@ const SECTIONS = [
   { id: "demos", label: "Demos" },
   { id: "projects", label: "Projects" },
   { id: "stacks", label: "Stacks" },
-  { id: "about-me", label: "About" },
   { id: "contact", label: "Contact" },
 ];
 
 const ScrollProgress = () => {
   const [progress, setProgress] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [stepPercents, setStepPercents] = useState<number[]>(
+    SECTIONS.map((_, index) =>
+      SECTIONS.length > 1 ? (index / (SECTIONS.length - 1)) * 100 : 0,
+    ),
+  );
 
   useEffect(() => {
     const updateProgress = () => {
@@ -26,6 +30,29 @@ const ScrollProgress = () => {
 
       let nextIndex = 0;
       const threshold = window.scrollY + window.innerHeight * 0.35;
+      const nextPercents = SECTIONS.map((section) => {
+        const el = document.getElementById(section.id);
+        if (!el || scrollable <= 0) return null;
+        const percent = (el.offsetTop / scrollable) * 100;
+        return Math.min(100, Math.max(0, percent));
+      });
+
+      const fallbackPercents = SECTIONS.map((_, index) =>
+        SECTIONS.length > 1 ? (index / (SECTIONS.length - 1)) * 100 : 0,
+      );
+      const resolvedPercents = nextPercents.map((value, index) =>
+        value === null ? fallbackPercents[index] : value,
+      );
+      setStepPercents((prev) => {
+        if (
+          prev.length === resolvedPercents.length &&
+          prev.every((value, index) => value === resolvedPercents[index])
+        ) {
+          return prev;
+        }
+        return resolvedPercents;
+      });
+
       SECTIONS.forEach((section, index) => {
         const el = document.getElementById(section.id);
         if (!el) return;
@@ -58,8 +85,7 @@ const ScrollProgress = () => {
           style={{ height: `${percent}%` }}
         />
         {SECTIONS.map((section, index) => {
-          const stepPercent =
-            SECTIONS.length > 1 ? (index / (SECTIONS.length - 1)) * 100 : 0;
+          const stepPercent = stepPercents[index] ?? 0;
           const isActive = index <= activeIndex;
           return (
             <a

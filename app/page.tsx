@@ -3,6 +3,7 @@ import Demo from "@/components/Layouts/Demo";
 import Footer from "@/components/Layouts/Footer";
 import Hero from "@/components/Layouts/Hero";
 import Projects from "@/components/Layouts/Projects";
+import Stacks from "@/components/Layouts/Stacks";
 import Tech from "@/components/Layouts/Tech";
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Tech />
       <Demo />
       <Projects />
+      <Stacks />
       <About />
       <Footer />
     </main>

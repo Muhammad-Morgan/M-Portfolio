@@ -7,6 +7,7 @@ const SECTIONS = [
   { id: "tech", label: "Tech" },
   { id: "demos", label: "Demos" },
   { id: "projects", label: "Projects" },
+  { id: "stacks", label: "Stacks" },
   { id: "about-me", label: "About" },
   { id: "contact", label: "Contact" },
 ];
@@ -20,15 +21,15 @@ const ScrollProgress = () => {
       const root = document.documentElement;
       const scrollable = root.scrollHeight - window.innerHeight;
       const next = scrollable > 0 ? window.scrollY / scrollable : 0;
-      setProgress(Math.min(1, Math.max(0, next)));
+      const clamped = Math.min(1, Math.max(0, next));
+      setProgress(clamped);
 
-      const threshold = window.innerHeight * 0.25;
+      const percent = clamped * 100;
       let nextIndex = 0;
-      SECTIONS.forEach((section, index) => {
-        const el = document.getElementById(section.id);
-        if (!el) return;
-        const top = el.getBoundingClientRect().top;
-        if (top <= threshold) {
+      SECTIONS.forEach((_, index) => {
+        const stepPercent =
+          SECTIONS.length > 1 ? (index / (SECTIONS.length - 1)) * 100 : 0;
+        if (percent >= stepPercent) {
           nextIndex = index;
         }
       });

@@ -42,12 +42,30 @@ export const links = [
     href: "#projects",
     icon: <Laptop />,
   },
-
   {
     id: 5,
+    label: "stacks",
+    href: "#stacks",
+    icon: <Cloud />,
+  },
+  {
+    id: 6,
     label: "about me",
     href: "#about-me",
     icon: <User />,
+  },
+];
+
+export const awsStacks = [
+  {
+    title: "product-management",
+    desc: "AWS stack for product workflows - roadmaps, releases, and insights backed by scalable services.",
+    href: "https://github.com/Muhammad-Morgan/aws-product-management",
+  },
+  {
+    title: "user-managment",
+    desc: "AWS stack for user onboarding, auth, and profile data with secure, audit-friendly storage.",
+    href: "https://github.com/Muhammad-Morgan/aws-user-managment",
   },
 ];
 export const skills = [

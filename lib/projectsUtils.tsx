@@ -67,6 +67,11 @@ export const awsStacks = [
     desc: "AWS stack for user onboarding, auth, and profile data with secure, audit-friendly storage.",
     href: "https://github.com/Muhammad-Morgan/aws-user-managment",
   },
+  {
+    title: "first-sqs",
+    desc: "AWS stack showcasing the usage of SQS. It lets different parts of the app communicate asynchronously, which helps to handle background tasks without blocking the API.",
+    href: "https://github.com/Muhammad-Morgan/aws-first-sqs",
+  },
 ];
 export const skills = [
   {

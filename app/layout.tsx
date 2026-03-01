@@ -30,7 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Muhammad Morgan | Full Stack Engineer",
   description:
-    "Full-stack engineer specializing in Next.js and MERN, delivering clean UI, scalable backends, and performance-first applications.",
+    "Full-stack engineer specializing in Next.js, Node.js, and Express, delivering scalable RESTful APIs, clean UI, and performance-first applications.",
 };
 
 export default function RootLayout({

@@ -54,7 +54,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
   const { id, url, icon, github, text, title } = project;
-  const isPersonalFinance = id === 1;
+  const isFeatured = featured;
   const label = featured ? "Featured" : `Project 0${id}`;
   return (
     <article
@@ -66,7 +66,7 @@ const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
       <div className="flex items-start justify-between gap-4">
         <span
           className={`flex items-center justify-center rounded-2xl bg-accent/10 text-accent ring-1 ring-accent/30 ${
-            isPersonalFinance ? "size-14" : "size-12"
+            isFeatured ? "size-14" : "size-12"
           }`}
         >
           {icon}
@@ -98,31 +98,35 @@ const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
       </div>
       <div
         className={`mt-6 flex flex-wrap items-center gap-4 ${
-          isPersonalFinance ? "text-base" : "text-sm"
+          isFeatured ? "text-base" : "text-sm"
         }`}
       >
         <Link
           href={url}
+          target="_blank"
+          rel="noreferrer"
           className={`inline-flex items-center gap-2 text-foreground/80 transition hover:text-accent ${
-            isPersonalFinance
+            isFeatured
               ? "rounded-full border border-border/70 px-3 py-2"
               : ""
           }`}
         >
-          <TbWorldWww className={isPersonalFinance ? "size-6" : "size-5"} />
+          <TbWorldWww className={isFeatured ? "size-6" : "size-5"} />
           Live
         </Link>
         {github ? (
           <Link
             href={github}
+            target="_blank"
+            rel="noreferrer"
             className={`inline-flex items-center gap-2 text-foreground/80 transition hover:text-accent ${
-              isPersonalFinance
+              isFeatured
                 ? "rounded-full border border-border/70 px-3 py-2"
                 : ""
             }`}
           >
             <FaGithubSquare
-              className={isPersonalFinance ? "size-6" : "size-5"}
+              className={isFeatured ? "size-6" : "size-5"}
             />
             Code
           </Link>

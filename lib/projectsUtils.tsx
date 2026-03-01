@@ -16,6 +16,7 @@ import {
   User,
   CreditCard,
   Cloud,
+  Server,
 } from "lucide-react";
 export const links = [
   {
@@ -44,12 +45,18 @@ export const links = [
   },
   {
     id: 5,
+    label: "backend apis",
+    href: "#backend-apis",
+    icon: <Server />,
+  },
+  {
+    id: 6,
     label: "stacks",
     href: "#stacks",
     icon: <Cloud />,
   },
   {
-    id: 6,
+    id: 7,
     label: "about me",
     href: "#about-me",
     icon: <User />,
@@ -71,6 +78,26 @@ export const awsStacks = [
     title: "first-sqs",
     desc: "AWS stack showcasing the usage of SQS. It lets different parts of the app communicate asynchronously, which helps to handle background tasks without blocking the API.",
     href: "https://github.com/Muhammad-Morgan/aws-first-sqs",
+  },
+];
+export const backendApis = [
+  {
+    title: "E-commerce API",
+    desc: [
+      "Architected a scalable RESTful API using Node.js and Express following MVC pattern.",
+      "Custom error classes, centralized error handling middleware, and request validation.",
+      "Implemented JWT-based authentication and role-based access control (RBAC).",
+    ],
+    repo: "https://github.com/Muhammad-Morgan/E_Commerce_API",
+  },
+  {
+    title: "JOBS_API",
+    desc: [
+      "Protected CRUD operations with authenticated access controls.",
+      "Documented endpoints using Swagger for clear API reference and integration readiness.",
+    ],
+    href: "https://jobs-api-gp8l.onrender.com/",
+    repo: "https://github.com/Muhammad-Morgan/JOBS_API",
   },
 ];
 export const skills = [
@@ -114,13 +141,21 @@ export const skills = [
 export const projects = [
   {
     id: 1,
+    url: "https://kanban-board-complete.vercel.app/",
+    icon: <Layers className="size-8" />,
+    github: "https://github.com/Muhammad-Morgan/kanban-board-complete",
+    text: "Kanban board for planning and tracking work with drag-and-drop lanes, edge runtime auth via NextAuth, and MongoDB/Mongoose persistence. Includes multi-board workflows, status transitions, and secure user sessions optimized for production use.",
+    title: "Kanban Board",
+  },
+  {
+    id: 2,
     url: "https://goaltracker-m.netlify.app/",
     icon: <Goal className="size-9" />,
     text: "Goal tracking app for setting targets, monitoring progress, and staying accountable. Supports recurring goals with daily, weekly, and custom frequencies. Tracks progress through date-based entries with clear status and completion logic. Built with a scalable schema and focus on UX, performance, and data consistency.",
     title: "Goal Tracker",
   },
   {
-    id: 2,
+    id: 3,
     url: "https://personal-finance-dashboard-nine-rho.vercel.app/",
     icon: <CreditCard className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Personal-Finance-Dashboard",
@@ -128,7 +163,7 @@ export const projects = [
     title: "",
   },
   {
-    id: 3,
+    id: 4,
     url: "https://next-store-roan-kappa.vercel.app/",
     icon: <StoreIcon className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Next-Store",
@@ -136,7 +171,7 @@ export const projects = [
     title: "Next Store",
   },
   {
-    id: 4,
+    id: 5,
     url: "https://jobify-tracker-brown.vercel.app/",
     icon: <BriefcaseBusiness className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Jobify",
@@ -144,7 +179,7 @@ export const projects = [
     title: "Jobify",
   },
   {
-    id: 5,
+    id: 6,
     url: "https://github-users-eomn.vercel.app/",
     icon: <SearchIcon className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Github-Users",
@@ -152,7 +187,7 @@ export const projects = [
     title: "Github User Search",
   },
   {
-    id: 6,
+    id: 7,
     url: "https://comply-task.vercel.app/",
     icon: <FormInputIcon className="size-7" />,
     text: "Form application with multiple stages that could be used for collecting different types of inputs from users, enhanced with fetching from api endpoints",

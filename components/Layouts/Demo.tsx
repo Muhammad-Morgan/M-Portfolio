@@ -1,5 +1,6 @@
 // app/(home)/Demo.tsx  (or components/sections/Demo.tsx)
 import { demos } from "@/lib/demos";
+import { cn } from "@/lib/utils";
 import { ArrowDownRight, ArrowUpRight, PlayCircle } from "lucide-react";
 
 export default function Demo() {
@@ -26,22 +27,37 @@ export default function Demo() {
         </div>
 
         {/* Grid */}
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 grid items-start gap-6 md:grid-cols-2">
           {demos.map((d) => (
             <article
               key={d.id}
-              className="group overflow-hidden rounded-2xl border bg-card border-border/70 shadow-sm"
+              id={`demo-${d.id}`}
+              className={cn(
+                "group h-fit overflow-hidden rounded-2xl border-2 bg-card border-border/70 shadow-sm",
+                `${d.id === "kanban-board" ? "border-accent shadow-2xl" : ""}`,
+              )}
             >
               {/* Video */}
               <div className="relative aspect-video w-full bg-muted">
-                <video
-                  className="h-full w-full object-cover"
-                  src={d.src}
-                  poster={d.poster}
-                  controls
-                  preload="metadata"
-                  playsInline
-                />
+                {d.embedUrl ? (
+                  <iframe
+                    className="h-full w-full"
+                    src={d.embedUrl}
+                    title={`${d.title} demo`}
+                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                ) : (
+                  <video
+                    className="h-full w-full object-cover"
+                    src={d.src}
+                    poster={d.poster}
+                    controls
+                    preload="metadata"
+                    playsInline
+                  />
+                )}
                 {/* subtle overlay label */}
                 <div className="pointer-events-none absolute left-3 top-3 inline-flex items-center gap-2 rounded-full border bg-background/70 px-3 py-1 text-xs text-foreground backdrop-blur">
                   <PlayCircle className="h-4 w-4" />

@@ -20,13 +20,13 @@ const Hero = () => {
           <p className="text-kicker reveal">Full Stack Engineer</p>
           <div className="flex gap-x-8">
             <p className="text-md uppercase tracking-[0.45em] text-accent/80 reveal reveal-delay-1">
-              Next.js
+              NEXT.JS
             </p>
             <p className="text-md uppercase tracking-[0.45em] reveal reveal-delay-1 text-muted-foreground">
-              MERN
+              NODE.JS
             </p>
             <p className="text-md uppercase tracking-[0.45em] text-accent/80 reveal reveal-delay-1">
-              AWS
+              EXPRESS
             </p>
           </div>
           <div className="space-y-4">
@@ -35,8 +35,19 @@ const Hero = () => {
               <span className="font-extrabold text-accent">Morgan</span>
             </h1>
             <p className="max-w-xl border-l-2 border-accent/70 pl-4 text-lg text-muted-foreground reveal reveal-delay-2">
-              Software engineer building Next.js and MERN products with clean
-              UI, scalable APIs, and performance-first delivery.
+              <span className="block">
+                • Specialized in architecting scalable RESTful APIs using
+                Node.js and Express.
+              </span>
+              <span className="block">
+                • Experienced in production workflows including Git-based
+                version control, CI/CD pipelines, and maintainable system
+                architecture.
+              </span>
+              <span className="block">
+                • Design modular systems applying SOLID principles and clean
+                architecture.
+              </span>
             </p>
           </div>
           <div className="flex flex-wrap gap-3 reveal reveal-delay-2">
@@ -131,11 +142,15 @@ const Hero = () => {
               </li>
               <li className="flex items-center justify-between gap-4">
                 <span>Stack</span>
-                <span className="text-foreground/80">Next.js | MERN</span>
+                <span className="text-foreground/80">
+                  Next.js | Node.js | Express
+                </span>
               </li>
               <li className="flex items-center justify-between gap-4">
                 <span>Specialty</span>
-                <span className="text-foreground/80">Full-stack delivery</span>
+                <span className="text-foreground/80">
+                  Scalable API delivery
+                </span>
               </li>
             </ul>
           </div>

@@ -59,6 +59,8 @@ const StackCard = ({ stack, index }: StackCardProps) => {
       <div className="mt-5">
         <Link
           href={stack.href}
+          target="_blank"
+          rel="noreferrer"
           className="inline-flex items-center gap-2 text-sm text-foreground/80 transition hover:text-accent"
         >
           View repo

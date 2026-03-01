@@ -18,14 +18,26 @@ const About = () => {
             <p className="text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
               Focus Areas
             </p>
-            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+            <ul className="mt-3 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center justify-between gap-4">
                 <span>UI systems</span>
                 <span className="text-foreground/80">Design-ready</span>
               </li>
               <li className="flex items-center justify-between gap-4">
+                <span>Backend APIs</span>
+                <span className="text-foreground/80">
+                  Scalable & secure
+                </span>
+              </li>
+              <li className="flex items-center justify-between gap-4">
                 <span>Delivery</span>
                 <span className="text-foreground/80">Performance-first</span>
+              </li>
+              <li className="flex items-center justify-between gap-4">
+                <span>Architecture</span>
+                <span className="text-foreground/80">
+                  MVC + SOLID
+                </span>
               </li>
             </ul>
           </div>
@@ -38,9 +50,12 @@ const About = () => {
             </h2>
           </div>
           <p className="border-l-2 border-accent/70 pl-4 text-sm leading-relaxed text-muted-foreground">
-            Hi, my name is Muhammad Morgan. I am a software engineer building
-            Next.js and MERN applications with clean architecture, performance
-            optimization, and scalable delivery.
+            Hi, my name is Muhammad Morgan. I specialize in architecting
+            scalable RESTful APIs with Node.js and Express, and delivering
+            full-stack apps using React, Next.js, and TypeScript. Since 2023,
+            I've freelanced on production projects, structuring APIs with MVC
+            (controllers, services, middleware) and designing modular systems
+            grounded in SOLID principles and clean architecture.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
@@ -59,14 +74,18 @@ const About = () => {
           </div>
           <div id="contact" className="surface-panel space-y-4 p-6">
             <p className="text-sm text-muted-foreground">
-              Ready to build the website that expresses you and your business?
-              Send me an email or reach out on WhatsApp.
+              Open to freelance work and collaborations on API-first or
+              full-stack products. If you need maintainable architecture,
+              production-ready delivery, or scalable backend systems, send me
+              an email or reach out on WhatsApp.
             </p>
             <ul className="space-y-3 text-sm rounded-2xl border border-border/70 p-4 transition-colors hover:border-accent">
               <li className="flex items-center gap-3 text-foreground/80">
                 <Mail className="size-5 text-accent" />
                 <Link
                   href="mailto:morganmuhammad158@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
                   className="underline decoration-accent/60 underline-offset-4 hover:text-accent"
                 >
                   morganmuhammad158@gmail.com
@@ -76,6 +95,8 @@ const About = () => {
                 <FaWhatsapp className="size-5 text-accent" />
                 <Link
                   href="https://api.whatsapp.com/send?phone=201289737637"
+                  target="_blank"
+                  rel="noreferrer"
                   className="underline decoration-accent/60 underline-offset-4 hover:text-accent"
                 >
                   +201289737637

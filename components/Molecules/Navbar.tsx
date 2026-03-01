@@ -45,10 +45,9 @@ const Navbar = () => {
               unoptimized
             />
           )}
-
         </Link>
         <LinksDropdown hash={hash} setHash={setHash} />
-        <ul className="hidden lg:flex gap-x-3">
+        <ul className="hidden lg:flex">
           {links.map((link) => {
             const { id, label, href } = link;
             const isActive = hash === href.slice(1);
@@ -80,14 +79,27 @@ const Navbar = () => {
           <span className="rounded-full border border-accent/30 bg-card/70 px-2 py-0.5 text-[10px] text-accent">
             New
           </span>
-          <span>Video demos are live.</span>
-          <Link
-            href="#demos"
-            className="text-accent underline decoration-accent/60 underline-offset-4"
-            onClick={() => setShowNotice(false)}
-          >
-            View demos
-          </Link>
+          <span>New Sections:</span>
+          <ul className="flex flex-wrap gap-x-4 gap-y-1">
+            <li>
+              <Link
+                href="#demo-kanban-board"
+                className="text-accent underline decoration-accent/60 underline-offset-4"
+                onClick={() => setShowNotice(false)}
+              >
+                Latest demo
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#backend-apis"
+                className="text-accent underline decoration-accent/60 underline-offset-4"
+                onClick={() => setShowNotice(false)}
+              >
+                Backend APIs
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>

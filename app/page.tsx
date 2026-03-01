@@ -2,6 +2,7 @@ import About from "@/components/Layouts/About";
 import Demo from "@/components/Layouts/Demo";
 import Footer from "@/components/Layouts/Footer";
 import Hero from "@/components/Layouts/Hero";
+import BackendApis from "@/components/Layouts/BackendApis";
 import Projects from "@/components/Layouts/Projects";
 import Stacks from "@/components/Layouts/Stacks";
 import Tech from "@/components/Layouts/Tech";
@@ -12,6 +13,7 @@ export default function Home() {
       <Tech />
       <Demo />
       <Projects />
+      <BackendApis />
       <Stacks />
       <About />
       <Footer />

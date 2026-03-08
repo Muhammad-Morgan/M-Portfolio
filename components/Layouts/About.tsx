@@ -80,24 +80,24 @@ const About = () => {
               an email or reach out on WhatsApp.
             </p>
             <ul className="space-y-3 text-sm rounded-2xl border border-border/70 p-4 transition-colors hover:border-accent">
-              <li className="flex items-center gap-3 text-foreground/80">
+              <li className="flex flex-wrap items-center gap-3 text-foreground/80">
                 <Mail className="size-5 text-accent" />
                 <Link
                   href="mailto:morganmuhammad158@gmail.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="underline decoration-accent/60 underline-offset-4 hover:text-accent"
+                  className="break-all underline decoration-accent/60 underline-offset-4 hover:text-accent"
                 >
                   morganmuhammad158@gmail.com
                 </Link>
               </li>
-              <li className="flex items-center gap-3 text-foreground/80">
+              <li className="flex flex-wrap items-center gap-3 text-foreground/80">
                 <FaWhatsapp className="size-5 text-accent" />
                 <Link
                   href="https://api.whatsapp.com/send?phone=201289737637"
                   target="_blank"
                   rel="noreferrer"
-                  className="underline decoration-accent/60 underline-offset-4 hover:text-accent"
+                  className="break-words underline decoration-accent/60 underline-offset-4 hover:text-accent"
                 >
                   +201289737637
                 </Link>

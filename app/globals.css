@@ -272,6 +272,7 @@ canvas {
     min-height: 100vh;
     isolation: isolate;
     background-color: var(--background);
+    overflow-x: hidden;
   }
 
   body::before,
@@ -336,7 +337,7 @@ canvas {
   }
 
   .text-kicker {
-    @apply text-xl uppercase tracking-[0.35em] text-muted-foreground;
+    @apply text-sm uppercase tracking-[0.2em] text-muted-foreground sm:text-base sm:tracking-[0.3em] md:text-lg md:tracking-[0.35em];
   }
 
   .hover-style {

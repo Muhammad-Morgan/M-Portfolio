@@ -18,14 +18,14 @@ const Hero = () => {
       <div className="section-inner grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="space-y-7">
           <p className="text-kicker reveal">Full Stack Engineer</p>
-          <div className="flex gap-x-8">
-            <p className="text-md uppercase tracking-[0.45em] text-accent/80 reveal reveal-delay-1">
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <p className="text-xs uppercase tracking-[0.25em] text-accent/80 reveal reveal-delay-1 sm:text-sm sm:tracking-[0.4em]">
               NEXT.JS
             </p>
-            <p className="text-md uppercase tracking-[0.45em] reveal reveal-delay-1 text-muted-foreground">
+            <p className="text-xs uppercase tracking-[0.25em] reveal reveal-delay-1 text-muted-foreground sm:text-sm sm:tracking-[0.4em]">
               NODE.JS
             </p>
-            <p className="text-md uppercase tracking-[0.45em] text-accent/80 reveal reveal-delay-1">
+            <p className="text-xs uppercase tracking-[0.25em] text-accent/80 reveal reveal-delay-1 sm:text-sm sm:tracking-[0.4em]">
               EXPRESS
             </p>
           </div>

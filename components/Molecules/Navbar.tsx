@@ -4,25 +4,15 @@ import LinksDropdown from "../Atoms/LinksDropdown";
 import { links } from "@/lib/projectsUtils";
 import { Button } from "../Atoms/button";
 import { useHashUpdate } from "@/lib/customHook";
-import navlogoLight from "@/public/assets/navlogo-lighttheme.png";
-import navlogoDark from "@/public/assets/navlogo-darktheme.png";
+import morganLogo from "@/public/assets/morgan-logo.png";
 import Image from "next/image";
-import { useTheme } from "next-themes";
-import { startTransition, useEffect, useState } from "react";
+import { useState } from "react";
 import ThemeToggle from "../Atoms/ThemeToggle";
 const Navbar = () => {
   const { hash, setHash } = useHashUpdate("");
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const [showNotice, setShowNotice] = useState(true);
 
-  useEffect(() => {
-    startTransition(() => setMounted(true));
-  }, []);
-
-  const handleScrollToTop = (
-    event: React.MouseEvent<HTMLAnchorElement>
-  ) => {
+  const handleScrollToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     setHash("overview");
     window.history.pushState(null, "", "/#");
@@ -37,27 +27,14 @@ const Navbar = () => {
           className="items-center gap-x-3 hidden lg:flex"
           onClick={handleScrollToTop}
         >
-          {mounted && resolvedTheme === "dark" ? (
-            <Image
-              src={navlogoDark}
-              alt="MM logo"
-              width={57}
-              height={57}
-              className="object-cover opacity-85 transition duration-150 hover:scale-105 hover:opacity-100"
-              // priority
-              unoptimized
-            />
-          ) : (
-            <Image
-              src={navlogoLight}
-              alt="MM logo"
-              width={60}
-              height={60}
-              className="object-cover opacity-85 transition duration-150 hover:scale-105 hover:opacity-100"
-              // priority
-              unoptimized
-            />
-          )}
+          <Image
+            src={morganLogo}
+            alt="MM logo"
+            width={67}
+            height={67}
+            className="object-cover opacity-85 transition duration-150 hover:scale-105 hover:opacity-100"
+            unoptimized
+          />
         </Link>
         <LinksDropdown hash={hash} setHash={setHash} />
         <ul className="hidden lg:flex">

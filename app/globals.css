@@ -111,40 +111,40 @@ canvas {
   --secondary-foreground: #3a4352;
   --muted: #f2f5fb;
   --muted-foreground: #5b6573;
-  --accent: #6c5dd3;
+  --accent: #2f5fbf;
   --accent-foreground: #ffffff;
   --destructive: #e15a67;
   --destructive-foreground: #ffffff;
   --border: #d6dde8;
   --input: #d6dde8;
-  --ring: #6c5dd3;
-  --chart-1: #6c5dd3;
-  --chart-2: #4f7bd9;
+  --ring: #2f5fbf;
+  --chart-1: #2f5fbf;
+  --chart-2: #3f76d3;
   --chart-3: #38b2ac;
-  --chart-4: #8a7cf7;
+  --chart-4: #5a8ee6;
   --chart-5: #ef8a62;
   --sidebar: #f6f8fc;
   --sidebar-foreground: #1f2a37;
-  --sidebar-primary: #6c5dd3;
+  --sidebar-primary: #2f5fbf;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #eef1f7;
   --sidebar-accent-foreground: #1f2a37;
   --sidebar-border: #d6dde8;
-  --sidebar-ring: #6c5dd3;
+  --sidebar-ring: #2f5fbf;
   --grid-line: rgba(31, 42, 55, 0.08);
   --grid-size: 64px;
-  --ambient-1: rgba(108, 93, 211, 0.18);
+  --ambient-1: rgba(47, 95, 191, 0.18);
   --ambient-2: rgba(255, 255, 255, 0.7);
   --hero-wash-start: rgba(255, 255, 255, 0.8);
   --hero-wash-end: rgba(255, 255, 255, 0);
-  --hero-spotlight: rgba(108, 93, 211, 0.22);
-  --hero-glow-1: rgba(108, 93, 211, 0.22);
+  --hero-spotlight: rgba(47, 95, 191, 0.22);
+  --hero-glow-1: rgba(47, 95, 191, 0.22);
   --hero-glow-2: rgba(255, 255, 255, 0.7);
   --surface-panel-start: rgba(255, 255, 255, 0.95);
   --surface-panel-end: rgba(255, 255, 255, 0.7);
   --surface-grid-line: rgba(31, 42, 55, 0.06);
   --surface-grid-line-strong: rgba(31, 42, 55, 0.1);
-  --surface-grid-accent: rgba(108, 93, 211, 0.12);
+  --surface-grid-accent: rgba(47, 95, 191, 0.12);
   --section-light-bg: #f7f9fd;
   --section-light-foreground: #1f2a37;
   --section-light-card: #ffffff;
@@ -158,9 +158,9 @@ canvas {
   --shadow-strong: rgba(15, 23, 42, 0.28);
   --shadow-deep: rgba(0, 0, 0, 0.35);
   --shadow-popover: rgba(15, 23, 42, 0.24);
-  --shadow-accent: rgba(108, 93, 211, 0.2);
-  --particle-color: #6c5dd3;
-  --particle-link: #6c5dd3;
+  --shadow-accent: rgba(47, 95, 191, 0.2);
+  --particle-color: #2f5fbf;
+  --particle-link: #2f5fbf;
 }
 .dark {
   color-scheme: dark;
@@ -197,8 +197,8 @@ canvas {
   --popover: #253244;
   --popover-foreground: #f8fafc;
 
-  --primary: #8b6be8;
-  --primary-foreground: #f7f5ff;
+  --primary: #4b7dd9;
+  --primary-foreground: #f3f6ff;
 
   --secondary: #2a3648;
   --secondary-foreground: #e2e8f0;
@@ -206,43 +206,43 @@ canvas {
   --muted: #223043;
   --muted-foreground: #b9c3cf;
 
-  --accent: #8b6be8;
-  --accent-foreground: #f7f5ff;
+  --accent: #4b7dd9;
+  --accent-foreground: #f3f6ff;
 
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
 
   --border: #2f3d52;
   --input: #2f3d52;
-  --ring: #8b6be8;
+  --ring: #4b7dd9;
 
-  --chart-1: #8b6be8;
-  --chart-2: #5f7dd9;
+  --chart-1: #4b7dd9;
+  --chart-2: #5f8ee6;
   --chart-3: #2fb7b1;
-  --chart-4: #a084f3;
+  --chart-4: #7aa6f5;
   --chart-5: #f0926b;
 
   --sidebar: #1f2a37;
   --sidebar-foreground: #f8fafc;
-  --sidebar-primary: #8b6be8;
-  --sidebar-primary-foreground: #f7f5ff;
+  --sidebar-primary: #4b7dd9;
+  --sidebar-primary-foreground: #f3f6ff;
   --sidebar-accent: #243446;
   --sidebar-accent-foreground: #e7edf6;
   --sidebar-border: #2f3d52;
-  --sidebar-ring: #8b6be8;
+  --sidebar-ring: #4b7dd9;
   --grid-line: rgba(255, 255, 255, 0.05);
-  --ambient-1: rgba(139, 107, 232, 0.25);
+  --ambient-1: rgba(75, 125, 217, 0.25);
   --ambient-2: rgba(255, 255, 255, 0.08);
   --hero-wash-start: rgba(255, 255, 255, 0.08);
   --hero-wash-end: rgba(255, 255, 255, 0);
-  --hero-spotlight: rgba(139, 107, 232, 0.3);
-  --hero-glow-1: rgba(139, 107, 232, 0.35);
+  --hero-spotlight: rgba(75, 125, 217, 0.3);
+  --hero-glow-1: rgba(75, 125, 217, 0.35);
   --hero-glow-2: rgba(255, 255, 255, 0.08);
   --surface-panel-start: rgba(37, 50, 70, 0.9);
   --surface-panel-end: rgba(27, 39, 54, 0.92);
   --surface-grid-line: rgba(255, 255, 255, 0.04);
   --surface-grid-line-strong: rgba(255, 255, 255, 0.08);
-  --surface-grid-accent: rgba(139, 107, 232, 0.22);
+  --surface-grid-accent: rgba(75, 125, 217, 0.22);
   --section-light-bg: #1f2c3f;
   --section-light-foreground: #e7edf6;
   --section-light-card: #243446;
@@ -256,9 +256,9 @@ canvas {
   --shadow-strong: rgba(0, 0, 0, 0.6);
   --shadow-deep: rgba(0, 0, 0, 0.7);
   --shadow-popover: rgba(0, 0, 0, 0.55);
-  --shadow-accent: rgba(139, 107, 232, 0.35);
-  --particle-color: #8b6be8;
-  --particle-link: #8b6be8;
+  --shadow-accent: rgba(75, 125, 217, 0.35);
+  --particle-color: #4b7dd9;
+  --particle-link: #4b7dd9;
 }
 @layer base {
   html {

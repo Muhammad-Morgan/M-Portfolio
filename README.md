@@ -13,4 +13,10 @@ This repository contains my personal portfolio built with Next.js 16, React 19, 
 - Shadcn UI primitives for controls and typography
 - Lucide icons and custom SVGs for hero art
 
+### Async Behavior
+- Timers: 2 (`setInterval`, `setTimeout`) in `components/Molecules/Navbar.tsx`.
+- Event listeners: 2 (`scroll`, `resize`) in `components/Atoms/ScrollProgress.tsx`.
+- Await usage: 1 (`loadFull(...)`) in `components/Organisms/HeroParticles.tsx`.
+- Total async-style operations: 5.
+
 Feel free to use this layout as inspiration or reach out for collaboration.

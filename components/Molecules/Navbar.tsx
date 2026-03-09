@@ -6,11 +6,27 @@ import { Button } from "../Atoms/button";
 import { useHashUpdate } from "@/lib/customHook";
 import morganLogo from "@/public/assets/morgan-logo.png";
 import Image from "next/image";
-import { useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 import ThemeToggle from "../Atoms/ThemeToggle";
 const Navbar = () => {
   const { hash, setHash } = useHashUpdate("");
   const [showNotice, setShowNotice] = useState(true);
+  const [noticeCountdown, setNoticeCountdown] = useState(10);
+
+  useEffect(() => {
+    if (!showNotice) return;
+    startTransition(() => setNoticeCountdown(10));
+    const intervalId = window.setInterval(() => {
+      setNoticeCountdown((prev) => Math.max(prev - 1, 0));
+    }, 1000);
+    const timeoutId = window.setTimeout(() => {
+      setShowNotice(false);
+    }, 10000);
+    return () => {
+      window.clearInterval(intervalId);
+      window.clearTimeout(timeoutId);
+    };
+  }, [showNotice]);
 
   const handleScrollToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
@@ -67,29 +83,32 @@ const Navbar = () => {
         }`}
       >
         <div className="section-inner mx-auto flex flex-wrap items-center gap-x-2 gap-y-1 px-[clamp(1.25rem,6vw,6rem)] py-2 text-[11px] uppercase tracking-[0.32em] text-foreground/80">
-          <span className="rounded-full border border-accent/30 bg-card/70 px-2 py-0.5 text-[10px]">
+          <span className="rounded-full border border-accent/30 bg-card/70 px-2 py-0.5 text-[10px] md:text-xs">
             New
           </span>
           <ul className="flex flex-wrap gap-x-4 gap-y-1">
             <li>
               <Link
                 href="#demo-kanban-board"
-                className="text-accent underline decoration-accent/60 underline-offset-4"
+                className="text-accent underline decoration-accent/60 underline-offset-4 text-[10px] md:text-xs capitalize"
                 onClick={() => setShowNotice(false)}
               >
-                Latest demo
+                latest demos
               </Link>
             </li>
             <li>
               <Link
                 href="#backend-apis"
-                className="text-accent underline decoration-accent/60 underline-offset-4"
+                className="text-accent underline decoration-accent/60 underline-offset-4 text-[10px] md:text-xs"
                 onClick={() => setShowNotice(false)}
               >
-                Backend APIs
+                API<span className="lowercase">s</span>
               </Link>
             </li>
           </ul>
+          <span className="ml-auto text-[9px] tracking-[0.28em] text-foreground/60">
+            Closes in {noticeCountdown}s
+          </span>
         </div>
       </div>
     </nav>

@@ -16,7 +16,7 @@ const About = () => {
           />
           <div className="rounded-2xl border border-border/70 hover:border-accent duration-150 bg-card/70 p-4">
             <p className="text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
-              Focus Areas
+              Core Areas
             </p>
             <ul className="mt-3 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center justify-between gap-4">
@@ -50,12 +50,11 @@ const About = () => {
             </h2>
           </div>
           <p className="border-l-2 border-accent/70 pl-4 text-sm leading-relaxed text-muted-foreground">
-            I specialize in architecting scalable RESTful APIs with Node.js and
-            Express, and delivering full-stack apps using React, Next.js, and
-            TypeScript. Since 2023, I've freelanced on production projects,
-            structuring APIs with MVC (controllers, services, middleware) and
-            designing modular systems grounded in SOLID principles and clean
-            architecture.
+            Dedicated to scalable RESTful API architecture with Node.js and
+            Express, plus full-stack delivery with React, Next.js, and
+            TypeScript. Since 2023, I have shipped production systems using MVC
+            (controllers, services, middleware), SOLID principles, and clean
+            architecture for modular, maintainable backends.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {[

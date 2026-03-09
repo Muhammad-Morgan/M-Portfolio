@@ -57,7 +57,7 @@ export const links = [
   },
   {
     id: 7,
-    label: "about me",
+    label: "about",
     href: "#about-me",
     icon: <User />,
   },
@@ -103,9 +103,9 @@ export const backendApis = [
 export const skills = [
   {
     id: 1,
-    title: "AWS",
-    text: "Architecting event-driven systems with serverless scale and secure-by-design boundaries.",
-    icon: <Cloud className="size-7" />,
+    title: "Express",
+    text: "Minimal API routing and middleware for robust web services.",
+    icon: <Route className="size-7" />,
   },
   {
     id: 2,
@@ -133,9 +133,9 @@ export const skills = [
   },
   {
     id: 6,
-    title: "Express",
-    text: "Minimal API routing and middleware for robust web services.",
-    icon: <Route className="size-7" />,
+    title: "AWS",
+    text: "Architecting event-driven systems with serverless scale and secure-by-design boundaries.",
+    icon: <Cloud className="size-7" />,
   },
 ];
 export const projects = [

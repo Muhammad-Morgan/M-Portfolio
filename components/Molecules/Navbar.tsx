@@ -45,7 +45,8 @@ const Navbar = () => {
               <Button
                 variant={isActive ? "link" : "ghost"}
                 key={id}
-                className={` py-3 text-xs uppercase tracking-[0.2em] ${
+                size="sm"
+                className={`py-3 text-[12px] uppercase tracking-[0.2em] ${
                   isActive ? "" : "text-muted-foreground"
                 }`}
                 asChild
@@ -66,10 +67,9 @@ const Navbar = () => {
         }`}
       >
         <div className="section-inner mx-auto flex flex-wrap items-center gap-x-2 gap-y-1 px-[clamp(1.25rem,6vw,6rem)] py-2 text-[11px] uppercase tracking-[0.32em] text-foreground/80">
-          <span className="rounded-full border border-accent/30 bg-card/70 px-2 py-0.5 text-[10px] text-accent">
+          <span className="rounded-full border border-accent/30 bg-card/70 px-2 py-0.5 text-[10px]">
             New
           </span>
-          <span>New Sections:</span>
           <ul className="flex flex-wrap gap-x-4 gap-y-1">
             <li>
               <Link

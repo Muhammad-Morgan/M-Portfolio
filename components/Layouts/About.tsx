@@ -50,12 +50,12 @@ const About = () => {
             </h2>
           </div>
           <p className="border-l-2 border-accent/70 pl-4 text-sm leading-relaxed text-muted-foreground">
-            Hi, my name is Muhammad Morgan. I specialize in architecting
-            scalable RESTful APIs with Node.js and Express, and delivering
-            full-stack apps using React, Next.js, and TypeScript. Since 2023,
-            I've freelanced on production projects, structuring APIs with MVC
-            (controllers, services, middleware) and designing modular systems
-            grounded in SOLID principles and clean architecture.
+            I specialize in architecting scalable RESTful APIs with Node.js and
+            Express, and delivering full-stack apps using React, Next.js, and
+            TypeScript. Since 2023, I've freelanced on production projects,
+            structuring APIs with MVC (controllers, services, middleware) and
+            designing modular systems grounded in SOLID principles and clean
+            architecture.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {[

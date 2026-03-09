@@ -34,18 +34,17 @@ const Hero = () => {
               <span className="font-extrabold">Muhammad</span>{" "}
               <span className="font-extrabold text-accent">Morgan</span>
             </h1>
-            <p className="max-w-xl border-l-2 border-accent/70 pl-4 text-lg text-muted-foreground reveal reveal-delay-2">
-              <span className="block">
-                • Specialized in architecting scalable RESTful APIs using
-                Node.js and Express.
+            <p className="max-w-xl border-l-2 border-accent/70 pl-4 text-lg text-muted-foreground reveal reveal-delay-2 space-y-1.5">
+              <span className="block text-base">
+                Specialized in architecting scalable RESTful APIs using Node.js
+                and Express.
               </span>
-              <span className="block">
-                • Experienced in production workflows including Git-based
-                version control, CI/CD pipelines, and maintainable system
-                architecture.
+              <span className="block text-base">
+                Experienced in production workflows including Git-based version
+                control, CI/CD pipelines, and maintainable system architecture.
               </span>
-              <span className="block">
-                • Design modular systems applying SOLID principles and clean
+              <span className="block text-base">
+                Design modular systems applying SOLID principles and clean
                 architecture.
               </span>
             </p>

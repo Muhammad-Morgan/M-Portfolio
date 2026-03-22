@@ -26,11 +26,22 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
 });
-
 export const metadata: Metadata = {
   title: "Muhammad Morgan | Full Stack Engineer",
   description:
     "Full-stack engineer specializing in Next.js, Node.js, and Express, delivering scalable RESTful APIs, clean UI, and performance-first applications.",
+  openGraph: {
+    title: "Muhammad Morgan | Full Stack Engineer",
+    description:
+      "Full-stack engineer specializing in Next.js, Node.js, and Express, delivering scalable RESTful APIs, clean UI, and performance-first applications.",
+    url: "https://m-morgan.netlify.app",
+    siteName: "M-Portfolio",
+    images: [
+      {
+        url: "https://res.cloudinary.com/morgan-cloud/image/upload/v1774191051/favicons_deuoqu.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

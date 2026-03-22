@@ -42,6 +42,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  verification:{
+    google: process.env.GOOGLESITEVER
+  }
 };
 
 export default function RootLayout({

@@ -1,6 +1,6 @@
 // global 404
 import Link from "next/link";
-import { Button } from "@/components/Atom/button";
+import { Button } from "@/components/Atoms/button";
 
 export default function NotFound() {
   return (

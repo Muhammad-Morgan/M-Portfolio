@@ -1,6 +1,6 @@
 "use client";
 
-import HeroImg from "@/public/assets/hero.svg";
+import HeroImg from "@/public/undraw_morning-news_h9nz.svg";
 import Image from "next/image";
 import { Button } from "../Atoms/button";
 import Link from "next/link";
@@ -124,7 +124,7 @@ const Hero = () => {
               className="absolute -inset-8 rounded-[32px] hero-spotlight blur-2xl opacity-70"
               aria-hidden="true"
             />
-            <div className="surface-panel overflow-hidden p-6">
+            <div className="surface-panel overflow-hidden p-10">
               <Image
                 className="mx-auto h-auto w-full max-w-sm float-slow"
                 src={HeroImg}

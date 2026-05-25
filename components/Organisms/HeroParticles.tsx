@@ -3,7 +3,7 @@
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 
 export default function HeroParticles() {
   const { resolvedTheme } = useTheme();
@@ -19,10 +19,10 @@ export default function HeroParticles() {
     const nextParticle = styles.getPropertyValue("--particle-color").trim();
     const nextLink = styles.getPropertyValue("--particle-link").trim();
     if (nextParticle) {
-      setParticleColor(nextParticle);
+      startTransition(() => setParticleColor(nextParticle));
     }
     if (nextLink) {
-      setLinkColor(nextLink);
+      startTransition(() => setLinkColor(nextLink));
     }
   }, [resolvedTheme]);
 

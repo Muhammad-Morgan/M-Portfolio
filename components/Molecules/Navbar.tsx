@@ -75,7 +75,7 @@ const Navbar = () => {
         </ul>
         <ThemeToggle />
       </section>
-      <div
+      {/* <div
         className={`overflow-hidden border-t border-border/60 bg-accent/10 transition-all duration-150 ease-linear ${
           showNotice
             ? "max-h-16 translate-y-0 opacity-100"
@@ -110,7 +110,7 @@ const Navbar = () => {
             Closes in {noticeCountdown}s
           </span>
         </div>
-      </div>
+      </div> */}
     </nav>
   );
 };

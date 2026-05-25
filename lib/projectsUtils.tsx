@@ -141,11 +141,11 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    url: "https://kanban-board-complete.vercel.app/",
-    icon: <Layers className="size-8" />,
-    github: "https://github.com/Muhammad-Morgan/kanban-board-complete",
-    text: "Kanban board for planning and tracking work with drag-and-drop lanes, edge runtime auth via NextAuth, and MongoDB/Mongoose persistence. Includes multi-board workflows, status transitions, and secure user sessions optimized for production use.",
-    title: "Kanban Board",
+    url: "https://e-commerce-26-1ef54b29bc8c.herokuapp.com/",
+    icon: <StoreIcon className="size-8" />,
+    github: "https://github.com/Muhammad-Morgan/E_Commerce_API",
+    text: "This Node.js and TypeScript E-commerce API backend features a secure, scalable architecture utilizing MongoDB to manage complex, interconnected data models and transactional workflows. It implements robust JWT authentication, role-based access control, advanced data aggregation for product ratings, and automated order processing logic. The API is designed with a focus on clean code, maintainability, and performance, following best practices for error handling, validation, and modular architecture.",
+    title: "E-Commerce API",
   },
   {
     id: 2,

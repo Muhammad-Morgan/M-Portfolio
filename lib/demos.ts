@@ -14,19 +14,20 @@ export type DemoItem = {
 
 export const demos: DemoItem[] = [
   {
-    id: "goal-tracker",
-    title: "Goal Tracker",
-    subtitle: "Goals, entries, progress, password reset",
-    src: "/videos/goal-tracker.mp4",
-    tags: ["Next.js", "Auth", "PostgreSQL", "UX"],
-    liveUrl: "https://goaltracker-m.netlify.app/",
+    id: "aalmatook-store",
+    title: "Aal Matook",
+    subtitle:
+      "A multilingual online storefront connecting customers with merchants",
+    src: "/videos/aal-matook.mp4",
+    tags: ["Multilingual", "Next.js", "TypeScript", "MongoDB", "Cloudinary"],
+    liveUrl: "https://aal-matook.vercel.app/",
   },
   {
-    id: "finance-dashboard",
-    title: "Finance Dashboard",
-    subtitle: "Income, expenses, budgets, and category insights",
-    src: "/videos/finance-dashboard.mp4",
-    tags: ["Next.js", "Auth", "PostgreSQL", "UX"],
-    liveUrl: "https://personal-finance-dashboard-nine-rho.vercel.app/",
+    id: "quiz-flow",
+    title: "Quiz Flow",
+    subtitle: "A focused learning and assessment platform",
+    src: "/videos/quiz-flow.mp4",
+    tags: ["Next.js", "TypeScript", "MongoDB", "NextAuth", "React Query"],
+    liveUrl: "https://quiz-flow-sandy.vercel.app/",
   },
 ];

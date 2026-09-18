@@ -27,13 +27,22 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 export const metadata: Metadata = {
-  title: "Muhammad Morgan | Full Stack Engineer",
+  title: "Muhammad Morgan | Full Stack Engineer & Product Builder",
   description:
-    "Full-stack engineer specializing in Next.js, Node.js, and Express, delivering scalable RESTful APIs, clean UI, and performance-first applications.",
+    "Portfolio of Muhammad Morgan, a full-stack engineer building product-focused experiences, scalable APIs, and thoughtful interfaces with Next.js, React, Node.js, and TypeScript.",
+  keywords: [
+    "Muhammad Morgan",
+    "full-stack engineer",
+    "Next.js developer",
+    "React developer",
+    "Node.js developer",
+    "Quiz Flow",
+    "Aal Matook",
+  ],
   openGraph: {
-    title: "Muhammad Morgan | Full Stack Engineer",
+    title: "Muhammad Morgan | Full Stack Engineer & Product Builder",
     description:
-      "Full-stack engineer specializing in Next.js, Node.js, and Express, delivering scalable RESTful APIs, clean UI, and performance-first applications.",
+      "Explore Muhammad Morgan's latest product work, including Quiz Flow and Aal Matook, alongside scalable API and full-stack builds.",
     url: "https://m-morgan.netlify.app",
     siteName: "M-Portfolio",
     images: [
@@ -42,9 +51,9 @@ export const metadata: Metadata = {
       },
     ],
   },
-  verification:{
-    google: process.env.GOOGLESITEVER
-  }
+  verification: {
+    google: process.env.GOOGLESITEVER,
+  },
 };
 
 export default function RootLayout({

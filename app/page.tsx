@@ -4,6 +4,7 @@ import Footer from "@/components/Layouts/Footer";
 import Hero from "@/components/Layouts/Hero";
 import BackendApis from "@/components/Layouts/BackendApis";
 import Projects from "@/components/Layouts/Projects";
+import UnderConstruction from "@/components/Layouts/UnderConstruction";
 import Stacks from "@/components/Layouts/Stacks";
 import Tech from "@/components/Layouts/Tech";
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Tech />
       <Demo />
       <Projects />
+      <UnderConstruction />
       <BackendApis />
       <Stacks />
       <About />

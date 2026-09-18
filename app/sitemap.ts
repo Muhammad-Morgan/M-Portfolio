@@ -1,12 +1,12 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://m-morgan.netlify.app";
- return [
+  const baseUrl = "https://m-portfolio-rho-ten.vercel.app";
+  return [
     {
-      url: "https://m-morgan.netlify.app",
+      url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 1,
     },
   ];

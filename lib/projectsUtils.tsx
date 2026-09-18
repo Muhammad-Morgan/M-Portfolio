@@ -17,6 +17,8 @@ import {
   CreditCard,
   Cloud,
   Server,
+  GraduationCap,
+  ShoppingBag,
 } from "lucide-react";
 export const links = [
   {
@@ -141,6 +143,21 @@ export const skills = [
 export const projects = [
   {
     id: 1,
+    url: "https://quiz-flow-sandy.vercel.app/",
+    icon: <GraduationCap className="size-8" />,
+    text: "Learning and assessment platform for instructors and students. Instructors can build MCQ, True/False, and Short Answer quizzes, schedule sessions, assign assessments, monitor attempts, and review responses that need manual evaluation. Students get a focused one-question-at-a-time experience with clear access to assigned quizzes and results.",
+    title: "Quiz Flow",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "NextAuth",
+      "React Query",
+      "Cloudinary",
+    ],
+  },
+  {
+    id: 2,
     url: "https://e-commerce-26-1ef54b29bc8c.herokuapp.com/",
     icon: <StoreIcon className="size-8" />,
     github: "https://github.com/Muhammad-Morgan/E_Commerce_API",
@@ -148,14 +165,14 @@ export const projects = [
     title: "E-Commerce API",
   },
   {
-    id: 2,
+    id: 3,
     url: "https://goaltracker-m.netlify.app/",
     icon: <Goal className="size-9" />,
     text: "Goal tracking app for setting targets, monitoring progress, and staying accountable. Supports recurring goals with daily, weekly, and custom frequencies. Tracks progress through date-based entries with clear status and completion logic. Built with a scalable schema and focus on UX, performance, and data consistency.",
     title: "Goal Tracker",
   },
   {
-    id: 3,
+    id: 4,
     url: "https://personal-finance-dashboard-nine-rho.vercel.app/",
     icon: <CreditCard className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Personal-Finance-Dashboard",
@@ -163,7 +180,7 @@ export const projects = [
     title: "",
   },
   {
-    id: 4,
+    id: 5,
     url: "https://next-store-roan-kappa.vercel.app/",
     icon: <StoreIcon className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Next-Store",
@@ -171,7 +188,7 @@ export const projects = [
     title: "Next Store",
   },
   {
-    id: 5,
+    id: 6,
     url: "https://jobify-tracker-brown.vercel.app/",
     icon: <BriefcaseBusiness className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Jobify",
@@ -179,7 +196,7 @@ export const projects = [
     title: "Jobify",
   },
   {
-    id: 6,
+    id: 7,
     url: "https://github-users-eomn.vercel.app/",
     icon: <SearchIcon className="size-7" />,
     github: "https://github.com/Muhammad-Morgan/Github-Users",
@@ -187,10 +204,20 @@ export const projects = [
     title: "Github User Search",
   },
   {
-    id: 7,
+    id: 8,
     url: "https://comply-task.vercel.app/",
     icon: <FormInputIcon className="size-7" />,
     text: "Form application with multiple stages that could be used for collecting different types of inputs from users, enhanced with fetching from api endpoints",
     title: "Multi Stages Form",
+  },
+];
+
+export const underConstructionProjects = [
+  {
+    title: "TGC",
+    icon: <ShoppingBag className="size-8" />,
+    text: "A product platform where merchants manage their catalog and customers discover products and connect with the merchant behind each listing.",
+    status: "Active client engagement",
+    videoSrc: "/videos/tgc-store.mp4",
   },
 ];

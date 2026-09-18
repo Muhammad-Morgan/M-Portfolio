@@ -7,6 +7,7 @@ const SECTIONS = [
   { id: "tech", label: "Tech" },
   { id: "demos", label: "Demos" },
   { id: "projects", label: "Projects" },
+  { id: "client-work", label: "Client Work" },
   { id: "backend-apis", label: "Backend APIs" },
   { id: "stacks", label: "Stacks" },
   { id: "contact", label: "Contact" },
@@ -79,40 +80,51 @@ const ScrollProgress = () => {
   const percent = Math.min(100, Math.max(0, progress * 100));
 
   return (
-    <nav
-      className="fixed right-4 top-1/2 z-50 hidden -translate-y-1/2 md:flex"
-      aria-label="Page sections"
-    >
-      <div className="relative h-56 w-1.5 rounded-full bg-border/80">
+    <>
+      <div
+        className="pointer-events-none fixed inset-x-0 top-0 z-60 h-1.5 bg-border/50"
+        aria-hidden="true"
+      >
         <div
-          className="absolute left-0 top-0 w-full rounded-full bg-accent"
-          style={{ height: `${percent}%` }}
+          className="h-full rounded-r-full bg-accent shadow-[0_0_12px_var(--shadow-accent)] transition-[width] duration-150 ease-out"
+          style={{ width: `${percent}%` }}
         />
-        {SECTIONS.map((section, index) => {
-          const stepPercent = stepPercents[index] ?? 0;
-          const isActive = index <= activeIndex;
-          return (
-            <a
-              key={section.id}
-              href={`#${section.id}`}
-              className={`group absolute left-1/2 z-20 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border transition ${
-                isActive
-                  ? "border-accent bg-accent ring-4 ring-accent/20"
-                  : "border-border bg-card"
-              }`}
-              style={{ top: `${stepPercent}%` }}
-              aria-label={section.label}
-              aria-current={index === activeIndex ? "true" : undefined}
-              title={section.label}
-            >
-              <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 translate-x-1 whitespace-nowrap rounded-xl border border-border bg-card px-3 py-2 text-xs text-foreground opacity-0 shadow-[0_10px_30px_var(--shadow-soft)] transition group-hover:translate-x-0 group-hover:opacity-100">
-                {section.label}
-              </span>
-            </a>
-          );
-        })}
       </div>
-    </nav>
+      <nav
+        className="fixed right-3 top-1/2 z-50 hidden -translate-y-1/2 md:flex"
+        aria-label="Page sections"
+      >
+        <div className="relative h-[min(22rem,52vh)] w-1.5 rounded-full bg-border/80">
+          <div
+            className="absolute left-0 top-0 w-full rounded-full bg-accent transition-[height] duration-150 ease-out"
+            style={{ height: `${percent}%` }}
+          />
+          {SECTIONS.map((section, index) => {
+            const stepPercent = stepPercents[index] ?? 0;
+            const isActive = index <= activeIndex;
+            return (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className={`group absolute left-1/2 z-20 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border transition ${
+                  isActive
+                    ? "border-accent bg-accent ring-4 ring-accent/15"
+                    : "border-border bg-card"
+                }`}
+                style={{ top: `${stepPercent}%` }}
+                aria-label={section.label}
+                aria-current={index === activeIndex ? "true" : undefined}
+                title={section.label}
+              >
+                <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 translate-x-1 whitespace-nowrap rounded-lg border border-border bg-card px-2.5 py-1.5 text-xs text-foreground opacity-0 shadow-[0_10px_30px_var(--shadow-soft)] transition group-hover:translate-x-0 group-hover:opacity-100">
+                  {section.label}
+                </span>
+              </a>
+            );
+          })}
+        </div>
+      </nav>
+    </>
   );
 };
 

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://m-morgan.netlify.app/sitemap.xml",
+    sitemap: "https://m-portfolio-rho-ten.vercel.app/sitemap.xml",
   };
 }

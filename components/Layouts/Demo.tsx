@@ -2,10 +2,11 @@
 import { demos } from "@/lib/demos";
 import { cn } from "@/lib/utils";
 import { ArrowDownRight, ArrowUpRight, PlayCircle } from "lucide-react";
+import DemoNotice from "@/components/Atoms/DemoNotice";
 
 export default function Demo() {
   return (
-    <section id="demos" className="w-full py-16 md:py-24">
+    <section id="demos" className="relative w-full py-16 md:py-24">
       <div className="mx-auto w-full max-w-6xl px-4">
         {/* Header */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -137,6 +138,7 @@ export default function Demo() {
           ))}
         </div>
       </div>
+      <DemoNotice />
     </section>
   );
 }

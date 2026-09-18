@@ -44,6 +44,7 @@ type Project = {
   github?: string;
   text: string;
   title: string;
+  tags?: string[];
 };
 
 type ProjectCardProps = {
@@ -53,12 +54,12 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
-  const { id, url, icon, github, text, title } = project;
+  const { id, url, icon, github, text, title, tags } = project;
   const isFeatured = featured;
   const label = featured ? "Featured" : `Project 0${id}`;
   return (
     <article
-      className={`flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-[0_18px_35px_var(--shadow-soft)] reveal transition-colors hover:border-accent ${
+      className={`flex h-fit flex-col rounded-2xl border border-border bg-card p-6 shadow-[0_18px_35px_var(--shadow-soft)] reveal transition-colors hover:border-accent ${
         featured ? "md:col-span-2 lg:row-span-2" : ""
       }`}
       style={{ animationDelay: `${index * 0.08}s` }}
@@ -66,7 +67,7 @@ const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
       <div className="flex items-start justify-between gap-4">
         <span
           className={`flex items-center justify-center rounded-2xl bg-accent/10 text-accent ring-1 ring-accent/30 ${
-            isFeatured ? "size-14" : "size-12"
+            isFeatured ? "size-13" : "size-12"
           }`}
         >
           {icon}
@@ -75,10 +76,20 @@ const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
           {label}
         </span>
       </div>
+
       <div className={`mt-5 ${featured ? "space-y-4" : "space-y-3"}`}>
         {featured && (
-          <div className="flex justify-center">
-            <Image src={projectLogo} alt="project-logo" width={250} />
+          <div className="flex flex-col">
+            <div className="my-5 flex items-center gap-3 rounded-2xl border border-accent/20 bg-accent/5 px-4 py-4">
+              <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">
+                Latest work
+              </span>
+              <span className="h-px flex-1 bg-accent/20" />
+              <span className="text-xs text-muted-foreground">2026</span>
+            </div>
+            <div className="flex justify-center my-5">
+              <Image src={projectLogo} alt="project-logo" width={250} />
+            </div>
           </div>
         )}
         <h3
@@ -95,6 +106,18 @@ const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
         >
           {text}
         </p>
+        {tags?.length ? (
+          <div className="flex flex-wrap gap-2 pt-1">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-accent/20 bg-accent/5 px-2.5 py-1 text-[11px] text-accent"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        ) : null}
       </div>
       <div
         className={`mt-6 flex flex-wrap items-center gap-4 ${
@@ -106,9 +129,7 @@ const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
           target="_blank"
           rel="noreferrer"
           className={`inline-flex items-center gap-2 text-foreground/80 transition hover:text-accent ${
-            isFeatured
-              ? "rounded-full border border-border/70 px-3 py-2"
-              : ""
+            isFeatured ? "rounded-full border border-border/70 px-3 py-2" : ""
           }`}
         >
           <TbWorldWww className={isFeatured ? "size-6" : "size-5"} />
@@ -120,14 +141,10 @@ const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
             target="_blank"
             rel="noreferrer"
             className={`inline-flex items-center gap-2 text-foreground/80 transition hover:text-accent ${
-              isFeatured
-                ? "rounded-full border border-border/70 px-3 py-2"
-                : ""
+              isFeatured ? "rounded-full border border-border/70 px-3 py-2" : ""
             }`}
           >
-            <FaGithubSquare
-              className={isFeatured ? "size-6" : "size-5"}
-            />
+            <FaGithubSquare className={isFeatured ? "size-6" : "size-5"} />
             Code
           </Link>
         ) : null}

@@ -25,9 +25,7 @@ const About = () => {
               </li>
               <li className="flex items-center justify-between gap-4">
                 <span>Backend APIs</span>
-                <span className="text-foreground/80">
-                  Scalable & secure
-                </span>
+                <span className="text-foreground/80">Scalable & secure</span>
               </li>
               <li className="flex items-center justify-between gap-4">
                 <span>Delivery</span>
@@ -35,9 +33,7 @@ const About = () => {
               </li>
               <li className="flex items-center justify-between gap-4">
                 <span>Architecture</span>
-                <span className="text-foreground/80">
-                  MVC + SOLID
-                </span>
+                <span className="text-foreground/80">MVC + SOLID</span>
               </li>
             </ul>
           </div>
@@ -75,12 +71,12 @@ const About = () => {
             <p className="text-sm text-muted-foreground">
               Open to freelance work and collaborations on API-first or
               full-stack products. If you need maintainable architecture,
-              production-ready delivery, or scalable backend systems, send me
-              an email or reach out on WhatsApp.
+              production-ready delivery, or scalable backend systems, send me an
+              email or reach out on WhatsApp.
             </p>
             <ul className="space-y-3 text-sm rounded-2xl border border-border/70 p-4 transition-colors hover:border-accent">
               <li className="flex flex-wrap items-center gap-3 text-foreground/80">
-                <Mail className="size-5 text-accent" />
+                <Mail className="size-5 text-accent-warm" />
                 <Link
                   href="mailto:morganmuhammad158@gmail.com"
                   target="_blank"
@@ -91,12 +87,12 @@ const About = () => {
                 </Link>
               </li>
               <li className="flex flex-wrap items-center gap-3 text-foreground/80">
-                <FaWhatsapp className="size-5 text-accent" />
+                <FaWhatsapp className="size-5 text-accent-warm" />
                 <Link
                   href="https://api.whatsapp.com/send?phone=201289737637"
                   target="_blank"
                   rel="noreferrer"
-                  className="break-words underline decoration-accent/60 underline-offset-4 hover:text-accent"
+                  className="wrap-break-word underline decoration-accent/60 underline-offset-4 hover:text-accent"
                 >
                   +201289737637
                 </Link>

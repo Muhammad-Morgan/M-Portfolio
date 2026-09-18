@@ -25,7 +25,7 @@ const BackendApis = () => {
               style={{ animationDelay: `${index * 0.08}s` }}
             >
               <div className="flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
+                <span className="text-[10px] uppercase tracking-[0.35em] text-accent-warm">
                   API 0{index + 1}
                 </span>
               </div>

@@ -55,7 +55,11 @@ const TechCard = ({ id, icon, title, text, index }: TechCardProps) => (
       <span className="flex size-12 items-center justify-center rounded-full bg-accent/10 text-accent ring-1 ring-accent/30">
         {icon}
       </span>
-      <span className="text-xs uppercase tracking-[0.35em] text-muted-foreground">
+      <span
+        className={`text-xs uppercase tracking-[0.35em] ${
+          index % 2 === 1 ? "text-accent-warm" : "text-muted-foreground"
+        }`}
+      >
         0{id}
       </span>
     </div>

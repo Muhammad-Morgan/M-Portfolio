@@ -80,11 +80,11 @@ const ProjectCard = ({ project, featured, index }: ProjectCardProps) => {
       <div className={`mt-5 ${featured ? "space-y-4" : "space-y-3"}`}>
         {featured && (
           <div className="flex flex-col">
-            <div className="my-5 flex items-center gap-3 rounded-2xl border border-accent/20 bg-accent/5 px-4 py-4">
-              <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">
+            <div className="my-5 flex items-center gap-3 rounded-2xl border border-accent-warm/30 bg-accent-warm/10 px-4 py-4">
+              <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent-warm">
                 Latest work
               </span>
-              <span className="h-px flex-1 bg-accent/20" />
+              <span className="h-px flex-1 bg-accent-warm/30" />
               <span className="text-xs text-muted-foreground">2026</span>
             </div>
             <div className="flex justify-center my-5">

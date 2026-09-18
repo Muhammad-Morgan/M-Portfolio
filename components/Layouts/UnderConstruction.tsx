@@ -64,7 +64,7 @@ const UnderConstruction = () => {
                         {project.title}
                       </h3>
                     </div>
-                    <span className="whitespace-nowrap pt-1 text-[10px] uppercase tracking-[0.18em] text-accent">
+                    <span className="whitespace-nowrap pt-1 text-[10px] uppercase tracking-[0.18em] text-accent-warm">
                       In delivery
                     </span>
                   </div>
@@ -73,7 +73,7 @@ const UnderConstruction = () => {
                   </p>
                   <div className="mt-6 flex items-center justify-between border-t border-border/70 pt-4 text-xs text-muted-foreground">
                     <span>{project.status}</span>
-                    <ArrowUpRight className="size-4 text-accent transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    <ArrowUpRight className="size-4 text-accent-warm transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </div>
                 </div>
               </article>

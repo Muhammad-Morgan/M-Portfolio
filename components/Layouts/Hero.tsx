@@ -25,7 +25,7 @@ const Hero = () => {
             <p className="text-xs uppercase tracking-[0.25em] reveal reveal-delay-1 text-muted-foreground sm:text-sm sm:tracking-[0.4em]">
               NODE.JS
             </p>
-            <p className="text-xs uppercase tracking-[0.25em] text-accent/80 reveal reveal-delay-1 sm:text-sm sm:tracking-[0.4em]">
+            <p className="text-xs uppercase tracking-[0.25em] text-accent-warm reveal reveal-delay-1 sm:text-sm sm:tracking-[0.4em]">
               EXPRESS
             </p>
           </div>
@@ -101,7 +101,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noreferrer"
                 href="https://www.linkedin.com/in/muhammad-morgan-858799250/"
-                className="inline-flex items-center gap-2 rounded-full border border-border/70 px-3 py-1.5 text-foreground/80 transition hover:border-accent hover:text-accent"
+                className="inline-flex items-center gap-2 rounded-full border border-border/70 px-3 py-1.5 text-foreground/80 transition hover:border-accent-warm hover:text-accent-warm"
               >
                 <FaLinkedin className="size-4" />
                 <span>LinkedIn</span>

@@ -34,8 +34,8 @@ export default function Demo() {
               key={d.id}
               id={`demo-${d.id}`}
               className={cn(
-                "group h-fit overflow-hidden rounded-2xl border-2 bg-card border-border/70 shadow-sm",
-                `${d.id === "kanban-board" ? "border-accent shadow-2xl" : ""}`,
+                "group h-fit overflow-hidden rounded-2xl border-2 bg-card border-border/70 shadow-sm transition-shadow hover:shadow-[0_20px_45px_var(--shadow-soft)]",
+                `${d.id === "aalmatook-store" ? "border-accent-warm/50" : ""}`,
               )}
             >
               {/* Video */}
@@ -60,7 +60,7 @@ export default function Demo() {
                   />
                 )}
                 {/* subtle overlay label */}
-                <div className="pointer-events-none absolute left-3 top-3 inline-flex items-center gap-2 rounded-full border bg-background/70 px-3 py-1 text-xs text-foreground backdrop-blur">
+                <div className="pointer-events-none absolute left-3 top-3 inline-flex items-center gap-2 rounded-full border border-accent-warm/40 bg-background/70 px-3 py-1 text-xs text-foreground backdrop-blur">
                   <PlayCircle className="h-4 w-4" />
                   Demo
                 </div>

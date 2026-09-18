@@ -113,6 +113,8 @@ canvas {
   --muted-foreground: #5b6573;
   --accent: #2f5fbf;
   --accent-foreground: #ffffff;
+  --accent-warm: #d9795f;
+  --accent-warm-soft: rgba(217, 121, 95, 0.22);
   --destructive: #e15a67;
   --destructive-foreground: #ffffff;
   --border: #d6dde8;
@@ -134,7 +136,7 @@ canvas {
   --grid-line: rgba(31, 42, 55, 0.08);
   --grid-size: 64px;
   --ambient-1: rgba(47, 95, 191, 0.18);
-  --ambient-2: rgba(255, 255, 255, 0.7);
+  --ambient-2: rgba(217, 121, 95, 0.1);
   --hero-wash-start: rgba(255, 255, 255, 0.8);
   --hero-wash-end: rgba(255, 255, 255, 0);
   --hero-spotlight: rgba(47, 95, 191, 0.22);
@@ -208,6 +210,8 @@ canvas {
 
   --accent: #4b7dd9;
   --accent-foreground: #f3f6ff;
+  --accent-warm: #f09a7b;
+  --accent-warm-soft: rgba(240, 154, 123, 0.24);
 
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
@@ -232,7 +236,7 @@ canvas {
   --sidebar-ring: #4b7dd9;
   --grid-line: rgba(255, 255, 255, 0.05);
   --ambient-1: rgba(75, 125, 217, 0.25);
-  --ambient-2: rgba(255, 255, 255, 0.08);
+  --ambient-2: rgba(240, 154, 123, 0.1);
   --hero-wash-start: rgba(255, 255, 255, 0.08);
   --hero-wash-end: rgba(255, 255, 255, 0);
   --hero-spotlight: rgba(75, 125, 217, 0.3);
@@ -378,12 +382,16 @@ canvas {
       var(--surface-panel-start),
       var(--surface-panel-end)
     );
-    box-shadow: 0 24px 50px var(--shadow-soft);
+    box-shadow:
+      0 24px 50px var(--shadow-soft),
+      0 1px 0 var(--accent-warm-soft);
   }
 
   .section-light .surface-panel {
     background: var(--card);
-    box-shadow: 0 18px 40px var(--shadow-soft);
+    box-shadow:
+      0 18px 40px var(--shadow-soft),
+      0 1px 0 var(--accent-warm-soft);
   }
 
   .surface-grid {
@@ -397,10 +405,16 @@ canvas {
         700px 240px at 18% 0%,
         var(--surface-grid-accent),
         transparent 60%
+      ),
+      radial-gradient(
+        360px 180px at 100% 100%,
+        var(--accent-warm-soft),
+        transparent 70%
       );
     background-size:
       140px 140px,
       140px 140px,
+      100% 100%,
       100% 100%;
     background-position: center;
   }
@@ -412,10 +426,20 @@ canvas {
         90deg,
         var(--surface-grid-line-strong) 1px,
         transparent 1px
+      ),
+      radial-gradient(
+        360px 180px at 100% 100%,
+        var(--accent-warm-soft),
+        transparent 70%
       );
     background-size:
       140px 140px,
-      140px 140px;
+      140px 140px,
+      100% 100%;
+  }
+
+  .progress-fill {
+    background: linear-gradient(90deg, var(--accent), var(--accent-warm));
   }
 
   .hero-glow {

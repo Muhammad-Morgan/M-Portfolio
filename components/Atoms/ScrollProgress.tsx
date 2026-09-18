@@ -86,7 +86,7 @@ const ScrollProgress = () => {
         aria-hidden="true"
       >
         <div
-          className="h-full rounded-r-full bg-accent shadow-[0_0_12px_var(--shadow-accent)] transition-[width] duration-150 ease-out"
+          className="progress-fill h-full rounded-r-full shadow-[0_0_12px_var(--shadow-accent)] transition-[width] duration-150 ease-out"
           style={{ width: `${percent}%` }}
         />
       </div>
